@@ -1,0 +1,60 @@
+@media (max-width: 900px) {
+  body {
+    padding-bottom: 88px;
+  }
+
+  nav,
+  section,
+  .hero,
+  footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #projects .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study:first-child {
+    grid-column: span 1;
+    aspect-ratio: 4 / 3;
+  }
+
+  #projects .case-study:first-child {
+    grid-column: span 1;
+    aspect-ratio: 4 / 3;
+  }
+
+  .process-item {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .process-desc {
+    grid-column: 2;
+  }
+
+  .contact-aside {
+    display: none;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

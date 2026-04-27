@@ -1,0 +1,27 @@
+:root {
+  --black: #080808;
+  --offblack: #0e0e0e;
+  --dim: #1a1a1a;
+  --border: rgba(255, 255, 255, 0.07);
+  --muted: rgba(255, 255, 255, 0.28);
+  --mid: rgba(255, 255, 255, 0.55);
+  --bright: rgba(255, 255, 255, 0.92);
+  --accent: #c8b89a;
+  --accent-dim: rgba(200, 184, 154, 0.18);
+  --red: #d4553a;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --mono: 'DM Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--bright);
+  font-family: var(--serif);
+  cursor: none;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
