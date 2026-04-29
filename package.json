@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "echo \"No build steps configured for this project\"",
+    "build": "node scripts/build.js",
     "dev": "echo \"No dev server configured for this project\""
   }
 }
