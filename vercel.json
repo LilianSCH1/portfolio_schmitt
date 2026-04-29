@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "^/$", "dest": "/portfolio.html" },
+    { "src": "^/projects-academiques/?$", "dest": "/projects-academiques.html" },
+    { "src": "^/(.*)$", "dest": "/$1" }
+  ]
+}
