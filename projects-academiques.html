@@ -23,7 +23,7 @@
   </ul>
 </nav>
 
-<section class="hero">
+<section class="hero" id="top">
   <div class="hero-grid-overlay"></div>
   <div class="hero-eyebrow">Détail des projets académiques</div>
   <h1 class="hero-headline">
@@ -31,50 +31,47 @@
     <em>BUT Informatique</em>
   </h1>
   <p class="hero-sub">
-    Cette page est prête à recevoir tes projets un par un.
-    Envoie-moi la liste, et je les intégrerai avec les technologies,
-    objectifs, résultats et captures si besoin.
+    Six projets sont présentés ci-dessous. Chaque fiche est cliquable,
+    puis détaillée avec les objectifs SAE, les ressources mobilisées,
+    ton implication, les apprentissages et des emplacements de captures.
   </p>
   <div class="hero-scroll">Voir les projets</div>
   <div class="hero-year">2026</div>
 </section>
 
-<section class="about" id="overview">
+<section class="about academic-intro" id="overview">
   <div class="about-left reveal">
-    <div class="section-label">Contenu à venir</div>
+    <div class="section-label">Vue d'ensemble</div>
     <p class="about-statement">
-      Ajout des projets en<br>
-      <strong>cours de préparation.</strong>
+      Six fiches cliquables<br>
+      <strong>et une structure complète.</strong>
     </p>
   </div>
   <div class="about-right reveal reveal-delay-2">
     <p class="about-body">
-      Tu peux me transmettre pour chaque projet: titre, contexte,
-      technologies utilisées, ce que tu as réalisé et le résultat.
-      Je ferai une mise en page cohérente avec ton portfolio.
+      L'objectif est de présenter chaque projet de façon lisible et homogène : objectif de SAE,
+      ressources mobilisées, implication, apprentissages, captures d'écran et conclusion.
     </p>
-    <div class="skills-grid">
-      <div class="skill-tag">PHP et Symfony</div>
-      <div class="skill-tag">Doctrine et MySQL</div>
-      <div class="skill-tag">Twig et HTML</div>
-      <div class="skill-tag">JavaScript et AJAX</div>
-      <div class="skill-tag">Sécurité et formulaires</div>
-      <div class="skill-tag">CRUD et gestion de données</div>
-      <div class="skill-tag">Tests et migrations</div>
-      <div class="skill-tag">Projets de groupe et perso</div>
+    <div class="project-anchor-grid">
+      <a class="skill-tag project-anchor" href="#project-01">MyPulse</a>
+      <a class="skill-tag project-anchor" href="#project-02">WikiCoaster</a>
+      <a class="skill-tag project-anchor" href="#project-03">Atlas</a>
+      <a class="skill-tag project-anchor" href="#project-04">Tournoi inter IUT</a>
+      <a class="skill-tag project-anchor" href="#project-05">Projet Java</a>
+      <a class="skill-tag project-anchor" href="#project-06">Projet SQL / BDD</a>
     </div>
   </div>
 </section>
 
 <section class="work" id="projects-list">
-  <div class="section-label reveal">Projets</div>
-  <div class="work-grid">
+  <div class="section-label reveal">Projets cliquables</div>
+  <div class="work-grid project-index-grid">
 
-    <div class="case-study reveal">
+    <a class="case-study reveal case-study-link" href="#project-01">
       <div class="cs-bg cs-bg-1"></div>
       <div class="cs-noise"></div>
       <div class="cs-content">
-        <div class="cs-index">01 / 02</div>
+        <div class="cs-index">01 / 06</div>
         <h2 class="cs-title">MyPulse</h2>
         <div class="cs-tags">
           <span class="cs-tag">SAE DevWeb S3</span>
@@ -84,111 +81,280 @@
       </div>
       <div class="cs-reveal">
         <div class="cs-reveal-eyebrow">Application web communautaire</div>
-        <p class="cs-reveal-desc">
-          Plateforme de vote pour musiques, artistes et groupes avec gestion des contenus,
-          rôles utilisateurs, recherche instantanée et lecteur audio intégré.
-        </p>
+        <p class="cs-reveal-desc">Plateforme de vote pour musiques, artistes et groupes, avec gestion des contenus et recherche instantanée.</p>
         <div class="cs-reveal-meta">
-          <div class="meta-item">
-            <label>Contexte</label>
-            <span>Projet académique de groupe</span>
-          </div>
-          <div class="meta-item">
-            <label>Stack</label>
-            <span>PHP, HTML/CSS/JS, MySQL</span>
-          </div>
-          <div class="meta-item">
-            <label>Points forts</label>
-            <span>Votes, recherche AJAX, rôles</span>
-          </div>
+          <div class="meta-item"><label>Contexte</label><span>Projet académique de groupe</span></div>
+          <div class="meta-item"><label>Stack</label><span>PHP, HTML/CSS/JS, MySQL</span></div>
+          <div class="meta-item"><label>Focus</label><span>Rôles, votes, AJAX</span></div>
         </div>
-        <div class="cs-reveal-arrow">Dépôt MyPulse</div>
+        <div class="cs-reveal-arrow">Ouvrir la fiche</div>
       </div>
-    </div>
+    </a>
 
-    <div class="case-study reveal reveal-delay-1">
+    <a class="case-study reveal reveal-delay-1 case-study-link" href="#project-02">
       <div class="cs-bg cs-bg-2"></div>
       <div class="cs-noise"></div>
       <div class="cs-content">
-        <div class="cs-index">02 / 02</div>
+        <div class="cs-index">02 / 06</div>
         <h2 class="cs-title">WikiCoaster</h2>
         <div class="cs-tags">
-          <span class="cs-tag">TP3 Symfony</span>
-          <span class="cs-tag">Symfony / Doctrine</span>
+          <span class="cs-tag">TP Symfony</span>
+          <span class="cs-tag">Twig / Doctrine</span>
           <span class="cs-tag">CRUD et filtres</span>
         </div>
       </div>
       <div class="cs-reveal">
-        <div class="cs-reveal-eyebrow">Base collaborative autour des coasters</div>
-        <p class="cs-reveal-desc">
-          Application Symfony dédiée à la gestion des montagnes russes, des parcs et des catégories,
-          avec pagination, formulaires, sécurité, fixtures et architecture prête à évoluer.
-        </p>
+        <div class="cs-reveal-eyebrow">Base collaborative</div>
+        <p class="cs-reveal-desc">Application Symfony de gestion des montagnes russes, des parcs et des catégories, pensée pour évoluer proprement.</p>
         <div class="cs-reveal-meta">
-          <div class="meta-item">
-            <label>Contexte</label>
-            <span>TP académique Symfony</span>
-          </div>
-          <div class="meta-item">
-            <label>Stack</label>
-            <span>Symfony, Twig, Doctrine, MySQL</span>
-          </div>
-          <div class="meta-item">
-            <label>Points forts</label>
-            <span>CRUD, filtres, sécurité, tests</span>
-          </div>
+          <div class="meta-item"><label>Contexte</label><span>TP académique Symfony</span></div>
+          <div class="meta-item"><label>Stack</label><span>Symfony, Twig, Doctrine, MySQL</span></div>
+          <div class="meta-item"><label>Focus</label><span>Formulaires, sécurité, tests</span></div>
         </div>
-        <div class="cs-reveal-arrow">Dépôt WikiCoaster</div>
+        <div class="cs-reveal-arrow">Ouvrir la fiche</div>
       </div>
-    </div>
+    </a>
+
+    <a class="case-study reveal reveal-delay-2 case-study-link" href="#project-03">
+      <div class="cs-bg cs-bg-3"></div>
+      <div class="cs-noise"></div>
+      <div class="cs-content">
+        <div class="cs-index">03 / 06</div>
+        <h2 class="cs-title">Atlas</h2>
+        <div class="cs-tags">
+          <span class="cs-tag">Stage CEN</span>
+          <span class="cs-tag">Angular / Node.js</span>
+          <span class="cs-tag">Migration applicative</span>
+        </div>
+      </div>
+      <div class="cs-reveal">
+        <div class="cs-reveal-eyebrow">Modernisation métier</div>
+        <p class="cs-reveal-desc">Migration d'une application MS Access vers une solution web plus robuste avec une base de données plus fiable.</p>
+        <div class="cs-reveal-meta">
+          <div class="meta-item"><label>Contexte</label><span>Stage au CEN Champagne-Ardenne</span></div>
+          <div class="meta-item"><label>Stack</label><span>Angular, Node.js / Express, PostgreSQL</span></div>
+          <div class="meta-item"><label>Focus</label><span>Maintenance et personnalisation</span></div>
+        </div>
+        <div class="cs-reveal-arrow">Ouvrir la fiche</div>
+      </div>
+    </a>
+
+    <a class="case-study reveal case-study-link" href="#project-04">
+      <div class="cs-bg cs-bg-1"></div>
+      <div class="cs-noise"></div>
+      <div class="cs-content">
+        <div class="cs-index">04 / 06</div>
+        <h2 class="cs-title">Tournoi inter IUT</h2>
+        <div class="cs-tags">
+          <span class="cs-tag">Projet personnel</span>
+          <span class="cs-tag">ERP web</span>
+          <span class="cs-tag">Organisation d'événement</span>
+        </div>
+      </div>
+      <div class="cs-reveal">
+        <div class="cs-reveal-eyebrow">Application de gestion</div>
+        <p class="cs-reveal-desc">Outil destiné à centraliser les informations du tournoi pour les spectateurs et les bénévoles avec une logique type ERP.</p>
+        <div class="cs-reveal-meta">
+          <div class="meta-item"><label>Contexte</label><span>Projet personnel</span></div>
+          <div class="meta-item"><label>Stack</label><span>Angular, TypeScript, Node.js</span></div>
+          <div class="meta-item"><label>Focus</label><span>Planning, infos et coordination</span></div>
+        </div>
+        <div class="cs-reveal-arrow">Ouvrir la fiche</div>
+      </div>
+    </a>
+
+    <a class="case-study reveal reveal-delay-1 case-study-link" href="#project-05">
+      <div class="cs-bg cs-bg-2"></div>
+      <div class="cs-noise"></div>
+      <div class="cs-content">
+        <div class="cs-index">05 / 06</div>
+        <h2 class="cs-title">Projet Java</h2>
+        <div class="cs-tags">
+          <span class="cs-tag">POO</span>
+          <span class="cs-tag">Tests / UML</span>
+          <span class="cs-tag">Algorithmes</span>
+        </div>
+      </div>
+      <div class="cs-reveal">
+        <div class="cs-reveal-eyebrow">Socle algorithmique</div>
+        <p class="cs-reveal-desc">Projet académique orienté conception objet, structuration du code, tests et mise en place d'une logique métier claire.</p>
+        <div class="cs-reveal-meta">
+          <div class="meta-item"><label>Contexte</label><span>Travail de formation</span></div>
+          <div class="meta-item"><label>Stack</label><span>Java, JUnit, UML</span></div>
+          <div class="meta-item"><label>Focus</label><span>POO, architecture, validation</span></div>
+        </div>
+        <div class="cs-reveal-arrow">Ouvrir la fiche</div>
+      </div>
+    </a>
+
+    <a class="case-study reveal reveal-delay-2 case-study-link" href="#project-06">
+      <div class="cs-bg cs-bg-3"></div>
+      <div class="cs-noise"></div>
+      <div class="cs-content">
+        <div class="cs-index">06 / 06</div>
+        <h2 class="cs-title">Projet SQL / BDD</h2>
+        <div class="cs-tags">
+          <span class="cs-tag">Modélisation</span>
+          <span class="cs-tag">PostgreSQL</span>
+          <span class="cs-tag">Requêtes / index</span>
+        </div>
+      </div>
+      <div class="cs-reveal">
+        <div class="cs-reveal-eyebrow">Base de données</div>
+        <p class="cs-reveal-desc">Projet centré sur la modélisation relationnelle, l'écriture de requêtes et la compréhension des performances d'une base de données.</p>
+        <div class="cs-reveal-meta">
+          <div class="meta-item"><label>Contexte</label><span>Travail académique</span></div>
+          <div class="meta-item"><label>Stack</label><span>SQL, PostgreSQL, pgAdmin</span></div>
+          <div class="meta-item"><label>Focus</label><span>Schéma, requêtes, optimisation</span></div>
+        </div>
+        <div class="cs-reveal-arrow">Ouvrir la fiche</div>
+      </div>
+    </a>
 
   </div>
 </section>
 
-<section class="process" id="summary">
-  <div class="section-label reveal">Synthèse</div>
-  <ol class="process-list">
-    <li class="process-item reveal">
-      <div class="process-num"></div>
-      <div class="process-title">MyPulse<br>plateforme communautaire</div>
-      <div class="process-desc">
-        Un projet orienté vote et gestion de contenus musicaux avec une logique de rôles,
-        de recherche instantanée et de consultation de classements.
+<section class="project-details" id="details">
+  <div class="section-label reveal">Détails des projets</div>
+
+  <article class="project-detail reveal" id="project-01">
+    <div class="project-detail-header">
+      <div class="project-kicker">Projet 01 / 06</div>
+      <h2 class="project-title">MyPulse</h2>
+      <p class="project-summary">Plateforme web de vote et de consultation musicale avec gestion des contenus, rôles utilisateurs et recherche instantanée.</p>
+      <div class="cs-tags">
+        <span class="cs-tag">SAE DevWeb S3</span>
+        <span class="cs-tag">PHP / MySQL</span>
+        <span class="cs-tag">HTML / CSS / JavaScript</span>
       </div>
-    </li>
-    <li class="process-item reveal">
-      <div class="process-num"></div>
-      <div class="process-title">WikiCoaster<br>socle Symfony</div>
-      <div class="process-desc">
-        Une application de gestion de coasters structurée autour de Symfony, Doctrine,
-        des formulaires, de la sécurité et d'une base prête à faire évoluer.
+    </div>
+    <div class="project-panels">
+      <section class="project-section">
+        <h3>Objectifs de la SAE</h3>
+        <p>Créer une application complète permettant de voter, consulter des classements et administrer des contenus musicaux avec une logique d'accès claire.</p>
+      </section>
+      <section class="project-section">
+        <h3>Ressources mobilisées et implication</h3>
+        <p>PHP, MySQL, HTML/CSS, JavaScript et AJAX. J'ai participé à la structure générale, aux interactions utilisateur, à la gestion des données et à l'intégration des règles métier.</p>
+      </section>
+      <section class="project-section">
+        <h3>Apprentissage et objectifs à venir</h3>
+        <p>Ce projet m'a aidé à mieux découper une application web et à gérer des fonctionnalités dynamiques. La suite serait d'améliorer les tests, l'ergonomie et la sécurité.</p>
+      </section>
+      <section class="project-section">
+        <h3>Captures d'écran et rapides explications</h3>
+        <div class="project-screens">
+          <div class="project-shot"><span>Capture 01</span><p>Accueil et navigation des contenus.</p></div>
+          <div class="project-shot"><span>Capture 02</span><p>Interface de vote et consultation des résultats.</p></div>
+        </div>
+      </section>
+      <section class="project-section">
+        <h3>Conclusion</h3>
+        <p>MyPulse m'a permis de consolider le travail en équipe et la logique de données côté web, avec une attention particulière portée à la lisibilité et à l'interaction.</p>
+      </section>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/LilianSCH1/SAE_DevWeb_S3" class="contact-link" target="_blank" rel="noopener">Ouvrir le dépôt</a>
+      <a href="#top" class="contact-link">Retour en haut</a>
+    </div>
+  </article>
+
+  <article class="project-detail reveal reveal-delay-1" id="project-02">
+    <div class="project-detail-header">
+      <div class="project-kicker">Projet 02 / 06</div>
+      <h2 class="project-title">WikiCoaster</h2>
+      <p class="project-summary">Application Symfony de gestion de montagnes russes, parcs et catégories, structurée autour de formulaires et de la maintenance des données.</p>
+      <div class="cs-tags">
+        <span class="cs-tag">TP Symfony</span>
+        <span class="cs-tag">Doctrine / Twig</span>
+        <span class="cs-tag">MySQL</span>
       </div>
-    </li>
-    <li class="process-item reveal">
-      <div class="process-num"></div>
-      <div class="process-title">Format<br>compact</div>
-      <div class="process-desc">
-        Chaque fiche contient seulement les informations utiles : objectif, technologies,
-        contexte et lien source, pour garder une lecture rapide.
-      </div>
-    </li>
-    <li class="process-item reveal">
-      <div class="process-num"></div>
-      <div class="process-title">Lecture<br>rapide</div>
-      <div class="process-desc">
-        Cette page sert d'aperçu académique global et permet d'ouvrir le détail des dépôts
-        sans surcharger le portfolio principal.
-      </div>
-    </li>
-  </ol>
+    </div>
+    <div class="project-panels">
+      <section class="project-section"><h3>Objectifs de la SAE</h3><p>Mettre en place une application CRUD propre et sécurisée autour d'entités liées, avec une navigation claire et une base de données exploitable.</p></section>
+      <section class="project-section"><h3>Ressources mobilisées et implication</h3><p>Symfony, Doctrine, Twig, MySQL et formulaires Symfony. J'ai travaillé sur les entités, les contrôleurs, la validation et l'organisation du code.</p></section>
+      <section class="project-section"><h3>Apprentissage et objectifs à venir</h3><p>Le projet m'a appris à structurer une application MVC et à garder un code maintenable. À l'avenir, je veux améliorer la réutilisabilité et la couverture de tests.</p></section>
+      <section class="project-section"><h3>Captures d'écran et rapides explications</h3><div class="project-screens"><div class="project-shot"><span>Capture 01</span><p>Liste des coasters et filtres.</p></div><div class="project-shot"><span>Capture 02</span><p>Formulaire de création ou de modification.</p></div></div></section>
+      <section class="project-section"><h3>Conclusion</h3><p>WikiCoaster m'a conforté dans l'usage de Symfony et dans la conception d'une base solide pour des projets plus ambitieux.</p></section>
+    </div>
+    <div class="project-links"><a href="https://github.com/LilianSCH1/WikiCoaster_Symfony" class="contact-link" target="_blank" rel="noopener">Ouvrir le dépôt</a><a href="#top" class="contact-link">Retour en haut</a></div>
+  </article>
+
+  <article class="project-detail reveal reveal-delay-2" id="project-03">
+    <div class="project-detail-header">
+      <div class="project-kicker">Projet 03 / 06</div>
+      <h2 class="project-title">Atlas</h2>
+      <p class="project-summary">Migration d'une application métier depuis MS Access vers une architecture web plus robuste avec Angular, Node.js et PostgreSQL.</p>
+      <div class="cs-tags"><span class="cs-tag">Stage</span><span class="cs-tag">Angular / Node.js</span><span class="cs-tag">PostgreSQL</span></div>
+    </div>
+    <div class="project-panels">
+      <section class="project-section"><h3>Objectifs de la SAE</h3><p>Moderniser un outil métier en améliorant sa maintenabilité, sa personnalisation et la stabilité des échanges de données.</p></section>
+      <section class="project-section"><h3>Ressources mobilisées et implication</h3><p>Angular, TypeScript, Node.js/Express, PostgreSQL et une logique d'API. J'ai participé à l'interface, à l'intégration des données et à l'adaptation des écrans métiers.</p></section>
+      <section class="project-section"><h3>Apprentissage et objectifs à venir</h3><p>Ce projet m'a appris à travailler sur une migration réelle et sur la cohérence front/back. Je souhaite progresser sur les tests, le versionnement des données et l'industrialisation.</p></section>
+      <section class="project-section"><h3>Captures d'écran et rapides explications</h3><div class="project-screens"><div class="project-shot"><span>Capture 01</span><p>Vue de l'interface modernisée.</p></div><div class="project-shot"><span>Capture 02</span><p>Écran de gestion des données migrées.</p></div></div></section>
+      <section class="project-section"><h3>Conclusion</h3><p>Atlas m'a confronté à une problématique proche du terrain, avec de vrais enjeux de migration, de maintenance et d'expérience utilisateur.</p></section>
+    </div>
+    <div class="project-links"><a href="#top" class="contact-link">Retour en haut</a></div>
+  </article>
+
+  <article class="project-detail reveal" id="project-04">
+    <div class="project-detail-header">
+      <div class="project-kicker">Projet 04 / 06</div>
+      <h2 class="project-title">Tournoi inter IUT</h2>
+      <p class="project-summary">Application web de type ERP pour faciliter l'organisation d'un tournoi et centraliser les informations utiles aux participants et bénévoles.</p>
+      <div class="cs-tags"><span class="cs-tag">Projet personnel</span><span class="cs-tag">TypeScript</span><span class="cs-tag">Gestion événementielle</span></div>
+    </div>
+    <div class="project-panels">
+      <section class="project-section"><h3>Objectifs de la SAE</h3><p>Construire un outil de coordination lisible pour gérer les matchs, les informations générales et l'organisation logistique du tournoi.</p></section>
+      <section class="project-section"><h3>Ressources mobilisées et implication</h3><p>Angular, TypeScript, HTML/CSS et une structure de données orientée organisation. J'ai travaillé sur l'architecture de l'interface, les vues et la logique de présentation.</p></section>
+      <section class="project-section"><h3>Apprentissage et objectifs à venir</h3><p>Le projet m'a appris à penser en termes de parcours utilisateur. Je veux aller plus loin sur les formulaires, la recherche et la gestion des accès.</p></section>
+      <section class="project-section"><h3>Captures d'écran et rapides explications</h3><div class="project-screens"><div class="project-shot"><span>Capture 01</span><p>Vue d'ensemble des informations du tournoi.</p></div><div class="project-shot"><span>Capture 02</span><p>Interface de consultation pour les bénévoles.</p></div></div></section>
+      <section class="project-section"><h3>Conclusion</h3><p>Ce projet m'a permis de travailler une logique plus métier et de réfléchir à l'expérience de différents profils d'utilisateurs.</p></section>
+    </div>
+    <div class="project-links"><a href="#top" class="contact-link">Retour en haut</a></div>
+  </article>
+
+  <article class="project-detail reveal reveal-delay-1" id="project-05">
+    <div class="project-detail-header">
+      <div class="project-kicker">Projet 05 / 06</div>
+      <h2 class="project-title">Projet Java</h2>
+      <p class="project-summary">Projet académique orienté conception objet, algorithmes et structure de code, avec une logique d'application claire et testable.</p>
+      <div class="cs-tags"><span class="cs-tag">Java</span><span class="cs-tag">POO</span><span class="cs-tag">JUnit / UML</span></div>
+    </div>
+    <div class="project-panels">
+      <section class="project-section"><h3>Objectifs de la SAE</h3><p>Concevoir une application Java robuste en respectant les principes de programmation orientée objet et une structure simple à maintenir.</p></section>
+      <section class="project-section"><h3>Ressources mobilisées et implication</h3><p>Java, UML, JUnit et les collections. J'ai participé à la modélisation, à l'écriture des classes métier et à la vérification des comportements attendus.</p></section>
+      <section class="project-section"><h3>Apprentissage et objectifs à venir</h3><p>Ce projet m'a aidé à renforcer ma rigueur sur l'architecture logicielle. La suite consiste à améliorer les tests automatisés et la séparation des responsabilités.</p></section>
+      <section class="project-section"><h3>Captures d'écran et rapides explications</h3><div class="project-screens"><div class="project-shot"><span>Capture 01</span><p>Structure des classes et diagramme de conception.</p></div><div class="project-shot"><span>Capture 02</span><p>Exécution du programme et résultats produits.</p></div></div></section>
+      <section class="project-section"><h3>Conclusion</h3><p>Ce projet Java m'a apporté de bons réflexes de conception et une base solide pour développer des solutions plus propres et testées.</p></section>
+    </div>
+    <div class="project-links"><a href="#top" class="contact-link">Retour en haut</a></div>
+  </article>
+
+  <article class="project-detail reveal reveal-delay-2" id="project-06">
+    <div class="project-detail-header">
+      <div class="project-kicker">Projet 06 / 06</div>
+      <h2 class="project-title">Projet SQL / BDD</h2>
+      <p class="project-summary">Travail académique sur la modélisation relationnelle, les requêtes SQL et la compréhension des performances d'une base de données.</p>
+      <div class="cs-tags"><span class="cs-tag">SQL</span><span class="cs-tag">PostgreSQL</span><span class="cs-tag">Requêtes</span></div>
+    </div>
+    <div class="project-panels">
+      <section class="project-section"><h3>Objectifs de la SAE</h3><p>Construire un schéma cohérent, manipuler les données avec des requêtes efficaces et comprendre les relations entre les tables.</p></section>
+      <section class="project-section"><h3>Ressources mobilisées et implication</h3><p>SQL, PostgreSQL et un outil comme pgAdmin. J'ai participé à la modélisation, à l'écriture des requêtes et au contrôle de la qualité des données.</p></section>
+      <section class="project-section"><h3>Apprentissage et objectifs à venir</h3><p>Ce projet m'a aidé à mieux maîtriser les jointures, les contraintes et l'optimisation. Je veux continuer sur l'indexation et la structuration de schémas plus complexes.</p></section>
+      <section class="project-section"><h3>Captures d'écran et rapides explications</h3><div class="project-screens"><div class="project-shot"><span>Capture 01</span><p>Schéma relationnel et tables principales.</p></div><div class="project-shot"><span>Capture 02</span><p>Exemples de requêtes et résultats.</p></div></div></section>
+      <section class="project-section"><h3>Conclusion</h3><p>Ce projet SQL m'a apporté une meilleure vision du rôle de la base dans une application et des bonnes pratiques à appliquer dès la conception.</p></section>
+    </div>
+    <div class="project-links"><a href="#top" class="contact-link">Retour en haut</a></div>
+  </article>
 </section>
 
 <section class="contact" id="source">
   <div class="contact-glow"></div>
   <div class="section-label reveal">Sources</div>
   <h2 class="contact-big reveal">
-    Les deux dépôts sont<br>
-    <em>consultables en ligne</em>
+    Les dépôts des projets<br>
+    <em>peuvent être ouverts ici</em>
   </h2>
   <div class="contact-row reveal">
     <a href="https://github.com/LilianSCH1/SAE_DevWeb_S3" class="contact-link" target="_blank" rel="noopener">
@@ -205,7 +371,7 @@
   <span class="footer-copy">Lilian Schmitt - Projets académiques - 2026</span>
   <span class="footer-status">
     <span class="status-dot"></span>
-    Vue compacte multi-projets
+    Six fiches détaillées et cliquables
   </span>
 </footer>
 

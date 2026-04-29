@@ -222,3 +222,145 @@
   content: '->';
   font-size: 16px;
 }
+
+.project-anchor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-anchor {
+  text-decoration: none;
+}
+
+.project-index-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-index-grid .case-study:first-child {
+  grid-column: auto;
+  aspect-ratio: 4 / 3;
+}
+
+.project-details {
+  padding: 0 0 40px;
+}
+
+.project-detail {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto 2px;
+  background: linear-gradient(180deg, rgba(14, 14, 14, 0.96), rgba(8, 8, 8, 0.98));
+  border: 1px solid var(--border);
+  padding: 40px;
+}
+
+.project-detail-header {
+  margin-bottom: 32px;
+}
+
+.project-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.project-title {
+  font-size: clamp(28px, 4vw, 56px);
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.project-summary {
+  max-width: 760px;
+  color: var(--mid);
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.project-panels {
+  display: grid;
+  gap: 18px;
+}
+
+.project-section {
+  padding: 22px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.project-section h3 {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.project-section p {
+  color: var(--mid);
+  line-height: 1.7;
+}
+
+.project-screens {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-shot {
+  min-height: 180px;
+  padding: 18px;
+  border: 1px solid rgba(200, 184, 154, 0.18);
+  background: linear-gradient(180deg, rgba(200, 184, 154, 0.08), rgba(255, 255, 255, 0.02));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-shot span {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.project-shot p {
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+@media (max-width: 1100px) {
+  .project-index-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-screens {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-detail {
+    width: calc(100% - 24px);
+    padding: 28px 18px;
+  }
+
+  .project-index-grid {
+    grid-template-columns: 1fr;
+  }
+}
