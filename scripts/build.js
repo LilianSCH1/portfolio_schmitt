@@ -26,7 +26,6 @@ async function copyRecursive(src, dest) {
 
 async function build() {
   try {
-    await fs.promises.rm(outDir, { recursive: true, force: true });
     await fs.promises.mkdir(outDir, { recursive: true });
     for (const item of items) {
       const src = path.join(repoRoot, item);
