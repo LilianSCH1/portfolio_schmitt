@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C1 — Réaliser un développement | Lilian Schmitt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <nav>
+    <a href="projects-academiques.html" class="nav-logo">← Compétences</a>
+    <ul class="nav-links">
+      <li><a href="portfolio.html#experiences">Expériences</a></li>
+      <li><a href="portfolio.html#projects">Projets</a></li>
+      <li><a href="portfolio.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav class="comp-nav">
+    <a href="projects-academiques.html" class="comp-nav-home">← Toutes</a>
+    <a href="competence-c1.html" class="active">C1</a>
+    <a href="competence-c2.html">C2</a>
+    <a href="competence-c3.html">C3</a>
+    <a href="competence-c4.html">C4</a>
+    <a href="competence-c5.html">C5</a>
+    <a href="competence-c6.html">C6</a>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-eyebrow">Compétence 01 / 06 — BUT Informatique</div>
+    <h1 class="hero-headline">
+      Réaliser un<br>
+      <em>développement d'application</em>
+    </h1>
+    <p class="hero-sub">
+      Concevoir, coder, tester et intégrer une solution informatique pour un client.
+      Composantes essentielles : communiquer avec les acteurs, respecter les besoins,
+      appliquer les principes algorithmiques, assurer la qualité du code, respecter la législation.
+    </p>
+    <div class="hero-scroll">Voir les preuves</div>
+    <div class="hero-year">2026</div>
+  </section>
+
+  <section class="about" id="overview">
+    <div class="about-left reveal">
+      <div class="section-label">Vue d'ensemble</div>
+      <p class="about-statement">
+        3 projets,<br>
+        <strong>3 contextes<br>de développement.</strong>
+      </p>
+    </div>
+    <div class="about-right reveal reveal-delay-2">
+      <p class="about-body">
+        Cette compétence est illustrée par trois projets complémentaires : une plateforme web full-stack
+        (MyPulse), l'audit et l'amélioration d'une application héritée (SAE S4), et une scène 3D temps réel
+        (WebGL). Ensemble, ils couvrent le cycle complet — de la conception à l'intégration,
+        en passant par la sécurité et les tests.
+      </p>
+      <div class="project-anchor-grid">
+        <a class="skill-tag project-anchor" href="#proof-01">MyPulse — SAE S3 |</a>
+        <a class="skill-tag project-anchor" href="#proof-02">Application de vote — SAE S4 |</a>
+        <a class="skill-tag project-anchor" href="#proof-03">WebGL Tableau Médiéval</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-details" id="preuves">
+    <div class="section-label reveal">Preuves d'acquisition</div>
+
+    <!-- PREUVE 1 : MyPulse -->
+    <article class="project-detail reveal reveal-delay-1" id="proof-01">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 01 / 03 — SAE S3, Janvier 2026</div>
+        <h2 class="project-title">MyPulse — Plateforme de vote musical</h2>
+        <p class="project-summary">
+          Développement full-stack en binôme (HOJA & SCHMITT) d'une plateforme communautaire de vote musical :
+          architecture MVC PHP, gestion de rôles, vote asynchrone AJAX et conformité RGPD.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">PHP 8.3</span>
+          <span class="cs-tag">MySQL</span>
+          <span class="cs-tag">Bootstrap</span>
+          <span class="cs-tag">AJAX</span>
+          <span class="cs-tag">Git</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>SAE S3 — créer une plateforme permettant de soumettre et voter pour des contenus musicaux (musiques, artistes, groupes). Stack : PHP 8.3 MVC, MySQL/PDO, Bootstrap, AJAX, Apache/Wampserver, Git/GitHub, Trello.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li>Conception et implémentation du système d'authentification multi-rôles (Invité / Basique / Certifié / Admin)</li>
+            <li>Workflow complet des contenus : soumission → validation admin → classement → archivage</li>
+            <li>Vote asynchrone AJAX avec contrainte d'unicité (une voix par utilisateur par catégorie)</li>
+            <li>Tableau de bord admin pour la modération et la gestion des membres certifiés</li>
+            <li>Système de gestion des consentements cookies (RGPD)</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Maîtrise de l'architecture MVC PHP artisanale et de la séparation des responsabilités</li>
+            <li>Gestion d'états complexes (5 statuts de contenu, 4 rôles) modélisés directement en base</li>
+            <li>Première implémentation AJAX en production : callbacks, mise à jour partielle du DOM, gestion d'erreurs réseau</li>
+            <li>Application concrète du RGPD : minimisation des données, consentements, durées de rétention</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot">
+              <span>Rapport final (24 pages)</span>
+              <p>Architecture MVC, roadmap MVP1/MVP2, modèle de données et choix techniques justifiés — livrable cosigné HOJA & SCHMITT.</p>
+            </div>
+            <div class="project-shot has-image">
+              <img src="assets/proj_acad/traces/MyPulse_Trace2.png" alt="Interface MyPulse — découverte des artistes et musiques" loading="lazy">
+              <span>Interface de découverte</span>
+              <p>Page de navigation : recherche d'artistes, musiques et groupes avec affichage en cartes et filtres par onglets.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/SAE_S3_MyPulse_Rapport_Final.pdf" class="contact-link" target="_blank" rel="noopener">Rapport final (PDF)</a>
+        <a href="assets/proj_acad/list_projects/SAE_S3_MyPulse_HOJA_SCHMITT-Lilian.pdf" class="contact-link" target="_blank" rel="noopener">Dossier descriptif (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+    <!-- PREUVE 2 : App Vote SAE S4 -->
+    <article class="project-detail reveal" id="proof-02">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 02 / 03 — SAE S4</div>
+        <h2 class="project-title">Application de vote — Audit et amélioration</h2>
+        <p class="project-summary">
+          Reprise d'une application PHP héritée : implémentation complète de la sécurité,
+          optimisations de performance mesurées et containerisation Docker. Score Mozilla Observatory F → A.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">PHP 8.0</span>
+          <span class="cs-tag">MariaDB</span>
+          <span class="cs-tag">Docker</span>
+          <span class="cs-tag">Tailwind</span>
+          <span class="cs-tag">PDO</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>SAE S4 — hériter d'une application de vote et la rendre conforme à une grille de 29 critères (sécurité, performance, infrastructure, robustesse). Référentiels : OWASP Top 10, Mozilla Observatory, Google Lighthouse.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li>Sécurité (12/12) : headers CSP, tokens CSRF, rate-limiting (5 tentatives/5 min), reCAPTCHA v2, session httponly + SameSite</li>
+            <li>Performance (8/8) : cache applicatif TTL, requête N+1 par JOIN, index SQL, pagination server-side, minification</li>
+            <li>Infrastructure (4/4) : containerisation Docker Compose (app PHP + MariaDB), génération de tokens sécurisée</li>
+            <li>Robustesse (5/5) : gestion centralisée des erreurs, valeurs par défaut sûres</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Capacité à lire, comprendre et améliorer une base de code inconnue de façon méthodique</li>
+            <li>Mesure objective de la qualité : LCP −33%, CLS −100%, score Observatory F → A</li>
+            <li>Défense en profondeur : chaque couche (HTTP, applicatif, session) apporte sa protection propre</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot">
+              <span>Rapport SAE S4</span>
+              <p>Les 29 modifications documentées avec justification technique et métriques avant/après pour chaque point.</p>
+            </div>
+            <div class="project-shot has-image">
+              <img src="assets/proj_acad/traces/AppVote_Comp1_Trace2.png" alt="Score Lighthouse 99/100 — MMA Fighter Election" loading="lazy">
+              <span>Score Lighthouse 99/100</span>
+              <p>Résultats après optimisation : Performance 99, FCP 0.7s, LCP 0.8s, CLS 0 — tous les indicateurs dans le vert.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/SAE_S4_App_Vote.pdf" class="contact-link" target="_blank" rel="noopener">Rapport SAE S4 (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+    <!-- PREUVE 3 : WebGL -->
+    <article class="project-detail reveal reveal-delay-2" id="proof-03">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 03 / 03 — R4-13, 2025-2026</div>
+        <h2 class="project-title">WebGL — Tableau Médiéval</h2>
+        <p class="project-summary">
+          Scène 3D temps réel avec Three.js reproduisant une nature morte médiévale :
+          géométries procédurales, textures canvas, effets de post-processing et panneau de contrôle interactif.
+          Contrainte : projet entier limité à 2 Mo.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">Three.js</span>
+          <span class="cs-tag">WebGL</span>
+          <span class="cs-tag">HTML5 Canvas</span>
+          <span class="cs-tag">lil-gui</span>
+          <span class="cs-tag">OBJ Loader</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>Module R4-13 (supervisé par M.Villard) — concevoir une scène 3D médiévale validant une checklist de 20+ critères (géométries, textures, éclairage, effets) avec un poids total inférieur à 2 Mo. Documentation Three.js, techniques de texture mapping avancées, HTML5 Canvas API.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li>Géométries : LatheGeometry (verre), ExtrudeGeometry (épée), Box/Plane/Sphere, import OBJ (casque médiéval)</li>
+            <li>Textures procédurales HTML5 Canvas : pierre, bois, parchemin, acier, flamme, skybox — aucune image externe</li>
+            <li>Effets : brouillard exponentiel, miroir physique (Reflector), tone mapping ACES Filmic, vignetage, particules, filtre Kuwahara</li>
+            <li>Interaction : caméra orbitale (OrbitControls), panneau lil-gui pour régler lumières et effets en temps réel</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Pipeline 3D temps réel : render loop, gestion GPU, optimisation pour maintenir un framerate stable</li>
+            <li>Génération procédurale : textures entièrement créées par code pour respecter la limite de 2 Mo</li>
+            <li>Post-processing : chaîne de passes (EffectComposer) sans impacter la scène 3D principale</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot has-image">
+              <img src="assets/proj_acad/list_projects/GUESMI_SCHMITT/medieval_tableau.png" alt="Scène 3D WebGL Tableau Médiéval" loading="lazy">
+              <span>Scène 3D rendue</span>
+              <p>Table médiévale, casque OBJ, verre à vin, bougie avec flamme en particules, miroir physique et brouillard exponentiel.</p>
+            </div>
+            <div class="project-shot has-image">
+              <img src="assets/proj_acad/traces/WebGL_Comp1_Trace2.png" alt="Comparaison reconstitution 3D et tableau de référence" loading="lazy">
+              <span>Reconstitution vs. tableau de référence</span>
+              <p>Comparaison côte à côte : scène 3D WebGL (gauche) et peinture originale de référence (droite) — fidélité de la reconstitution médiévale.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/GUESMI_SCHMITT/index.html" class="contact-link" target="_blank" rel="noopener">Ouvrir le projet WebGL</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+  </section>
+
+  <div class="comp-nav-bottom">
+    <a href="projects-academiques.html">← Toutes les compétences</a>
+    <span class="nav-center">C1 / 06</span>
+    <a href="competence-c2.html">C2 — Optimiser →</a>
+  </div>
+
+  <footer>
+    <span class="footer-copy">Lilian Schmitt — C1 Réaliser un développement — 2026</span>
+    <span class="footer-status">
+      <span class="status-dot"></span>
+      Recherche d'alternance / stage active
+    </span>
+  </footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+
+</html>

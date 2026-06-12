@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C3 — Administrer des systèmes | Lilian Schmitt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <nav>
+    <a href="projects-academiques.html" class="nav-logo">← Compétences</a>
+    <ul class="nav-links">
+      <li><a href="portfolio.html#experiences">Expériences</a></li>
+      <li><a href="portfolio.html#projects">Projets</a></li>
+      <li><a href="portfolio.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav class="comp-nav">
+    <a href="projects-academiques.html" class="comp-nav-home">← Toutes</a>
+    <a href="competence-c1.html">C1</a>
+    <a href="competence-c2.html">C2</a>
+    <a href="competence-c3.html" class="active">C3</a>
+    <a href="competence-c4.html">C4</a>
+    <a href="competence-c5.html">C5</a>
+    <a href="competence-c6.html">C6</a>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-eyebrow">Compétence 03 / 06 — BUT Informatique</div>
+    <h1 class="hero-headline">
+      Administrer des systèmes<br>
+      <em>informatiques complexes</em>
+    </h1>
+    <p class="hero-sub">
+      Installer, configurer, déployer et maintenir des infrastructures informatiques communicantes,
+      en tenant compte des besoins de sécurité et de la pérennité des systèmes.
+      Composantes essentielles : maîtriser l'architecture système/réseau, sécuriser les systèmes,
+      appliquer les obligations légales, mettre en œuvre des mesures correctives.
+    </p>
+    <div class="hero-scroll">Voir les preuves</div>
+    <div class="hero-year">2026</div>
+  </section>
+
+  <section class="about" id="overview">
+    <div class="about-left reveal">
+      <div class="section-label">Vue d'ensemble</div>
+      <p class="about-statement">
+        2 preuves,<br>
+        <strong>du système<br>à l'infrastructure.</strong>
+      </p>
+    </div>
+    <div class="about-right reveal reveal-delay-2">
+      <p class="about-body">
+        Cette compétence est illustrée par deux projets complémentaires : la SAE Linux couvre
+        l'administration système fondamentale (CLI, utilisateurs, réseau, services), et le
+        volet infrastructure de la SAE S4 démontre la containerisation Docker et le durcissement
+        d'un serveur web — de l'OS au déploiement sécurisé.
+      </p>
+      <div class="project-anchor-grid">
+        <a class="skill-tag project-anchor" href="#proof-01">SAE Linux — Administration système |</a>
+        <a class="skill-tag project-anchor" href="#proof-02">App Vote — Infrastructure & Sécurité</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-details" id="preuves">
+    <div class="section-label reveal">Preuves d'acquisition</div>
+
+    <!-- PREUVE 1 : SAE Linux -->
+    <article class="project-detail reveal reveal-delay-1" id="proof-01">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 01 / 02 — SAE Linux, Binôme HOJA & SCHMITT</div>
+        <h2 class="project-title">SAE Linux — Guide d'administration système</h2>
+        <p class="project-summary">
+          Réalisation en binôme d'un guide complet d'administration Linux : architecture système,
+          installation de distributions, gestion des utilisateurs et des permissions,
+          configuration réseau, processus, déploiement Apache/MariaDB.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">Linux (Ubuntu/Debian/Fedora)</span>
+          <span class="cs-tag">Bash</span>
+          <span class="cs-tag">Apache</span>
+          <span class="cs-tag">MariaDB</span>
+          <span class="cs-tag">SSH</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>SAE Administration Linux en binôme — produire un guide couvrant l'utilisation et l'administration de Linux, depuis l'installation jusqu'à la configuration de services réseau. Distributions : Ubuntu LTS, Debian, Fedora. Environnements : GNOME, KDE, XFCE. Références : man pages, Arch Wiki, cours systèmes d'exploitation.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li><strong>Architecture système :</strong> modèle 3 couches (matériel → noyau → espace utilisateur), scheduler, mémoire virtuelle</li>
+            <li><strong>CLI :</strong> navigation (ls, cd, find), manipulation fichiers, recherche grep/locate, éditeur vim/nano</li>
+            <li><strong>Utilisateurs et permissions :</strong> adduser, usermod, userdel, groupadd, /etc/passwd, /etc/shadow, sudo, chmod/chown, ACL setfacl</li>
+            <li><strong>Réseau :</strong> ip addr, ping, SSH (connexion + clés asymétriques), netstat/ss, /etc/hosts</li>
+            <li><strong>Processus et services :</strong> ps/top/htop, kill/nice/cron — installation et configuration Apache (virtualhost) et MariaDB</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Passer du GUI au CLI : les commandes exposent l'état du système de façon directe et scriptable</li>
+            <li>Principe du moindre privilège : chaque processus tourne avec les droits minimaux (UID/GID, permissions)</li>
+            <li>SSH et clés asymétriques : première implémentation réelle d'authentification par clé publique/privée</li>
+            <li>Configuration fichiers vs. GUI : comprendre /etc/network/interfaces, resolv.conf plutôt que des menus graphiques</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot">
+              <span>Guide Linux complet</span>
+              <p>Document couvrant architecture, installation, CLI, utilisateurs, réseau, processus et services — avec exemples de commandes pour chaque section.</p>
+            </div>
+            <div class="project-shot">
+              <span>Configuration réseau & services</span>
+              <p>Sessions SSH documentées (génération de clés, connexion), configuration Apache virtualhost et sécurisation initiale MariaDB — dans le guide PDF.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/SAE Linux-HOJA_SCHMITT.pdf" class="contact-link" target="_blank" rel="noopener">Guide Linux (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+    <!-- PREUVE 2 : App Vote — Infrastructure & Sécurité -->
+    <article class="project-detail reveal" id="proof-02">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 02 / 02 — SAE S4 (volet infrastructure)</div>
+        <h2 class="project-title">App Vote — Infrastructure Docker & Durcissement sécurité</h2>
+        <p class="project-summary">
+          Containerisation complète d'une application PHP/MariaDB avec Docker Compose et
+          durcissement du serveur web : headers HTTP stricts (CSP), rate-limiting, session
+          sécurisée. Score Mozilla Observatory amélioré de F à A.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">Docker</span>
+          <span class="cs-tag">docker-compose</span>
+          <span class="cs-tag">CSP</span>
+          <span class="cs-tag">CSRF</span>
+          <span class="cs-tag">Rate-limiting</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>SAE S4 — 15 points d'infrastructure et sécurité à atteindre sur l'application héritée, chacun documenté avec implémentation vérifiable. Référentiels : OWASP Top 10, Mozilla Observatory, RFC 6797 (HSTS), MDN CSP Level 3.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li><strong>Docker Compose :</strong> Dockerfile (php:8.0-apache + extensions PDO), deux services séparés app/db, volumes pour persistance, variables d'environnement pour les secrets</li>
+            <li><strong>Headers HTTP :</strong> CSP stricte (sources explicites), X-Frame-Options, HSTS, désactivation du directory listing Apache</li>
+            <li><strong>Sécurité applicative :</strong> tokens CSRF sur tous les formulaires POST, rate-limiting PHP (5 tentatives/5 min par IP), reCAPTCHA v2, pages d'erreur sans stack trace</li>
+            <li><strong>Session :</strong> session_set_cookie_params avec httponly=true, SameSite=Strict, secure=true</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Défense en profondeur : réseau → HTTP → applicatif → session — chaque couche réduit la surface d'attaque</li>
+            <li>Docker en contexte réel : réseaux bridge, volumes, secrets — au-delà des tutoriels</li>
+            <li>Mesure objective de la sécurité : Mozilla Observatory traduit des configurations techniques en score actionnable</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot">
+              <span>Score Observatory F → A</span>
+              <p>Score F (headers absents) → score A après implémentation — progression documentée dans le rapport SAE S4.</p>
+            </div>
+            <div class="project-shot">
+              <span>docker-compose.yml et CSP</span>
+              <p>Configuration Docker avec services app/db, et extrait du header CSP défini avec politique stricte.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/SAE_S4_App_Vote.pdf" class="contact-link" target="_blank" rel="noopener">Rapport SAE S4 (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+  </section>
+
+  <div class="comp-nav-bottom">
+    <a href="competence-c2.html">← C2 — Optimiser</a>
+    <span class="nav-center">C3 / 06</span>
+    <a href="competence-c4.html">C4 — Gérer des données →</a>
+  </div>
+
+  <footer>
+    <span class="footer-copy">Lilian Schmitt — C3 Administrer des systèmes — 2026</span>
+    <span class="footer-status">
+      <span class="status-dot"></span>
+      Recherche d'alternance / stage active
+    </span>
+  </footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+
+</html>

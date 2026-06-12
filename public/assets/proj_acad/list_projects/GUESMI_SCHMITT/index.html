@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Projets Web GL 2025-2026 — Tableau médiéval</title>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Projets Web GL 2025-2026</h1>
+    <h2>D. Guesmi &amp; L. Schmitt — R4-13 (PF Villard)</h2>
+
+    <main class="layout">
+        <section class="scene-block">
+            <h3>Reconstitution du tableau</h3>
+            <div class="frame-outer">
+                <div class="frame-inner">
+                    <div id="webGL"></div>
+                    <div class="hud-buttons">
+                        <button id="dust-toggle" type="button" aria-pressed="true">Poussières : ON</button>
+                        <button id="oil-toggle" type="button" aria-pressed="true">Peinture huile : ON</button>
+                    </div>
+                </div>
+            </div>
+            <p class="caption">
+                Vue 3D temps réel : utilisez la souris pour orbiter, molette pour zoomer.
+            </p>
+            <div id="gui-container"></div>
+        </section>
+
+        <section class="reference-block">
+            <h3>Tableau de référence</h3>
+            <img src="medieval_tableau.png" alt="Peinture médiévale de référence" class="reference-img">
+        </section>
+    </main>
+
+    <section class="explanations">
+        <h3>Explications techniques</h3>
+        <p>
+            Scène <strong>Three.js</strong> : une nature morte médiévale posée sur
+            une table en bois avec un casque, parchemin, verre de vin, bougie, et un petit
+            miroir rond accroché au mur.
+        </p>
+        <p>
+            <strong>Formes: </strong> Tout est construit à partir des géométries de
+            base (boîte, plan, cylindre, sphère, tore) afin d'économiser de la mémoire.
+            Le pied du verre est tourné
+            avec <code>LatheGeometry</code>, la lame de l'épée extrudée avec
+            <code>ExtrudeGeometry</code>. Seul le casque vient d'un fichier
+            <code>.obj en raisons de sa complexité</code>.
+        </p>
+        <p>
+            <strong>Textures: </strong> Pour rester sous 2 Mo, aucune image n'est
+            chargée : la pierre, le bois, le parchemin, l'acier du casque, la
+            flamme, et même la skybox sont dessinés au démarrage sur des canvas
+            HTML5. Toutes les normales sont calculées à partir de ces mêmes
+            dessins, donc le relief tombe pile sur les motifs.
+        </p>
+        <p>
+            <strong>Casque: </strong> L'OBJ modélisé sur Blender
+        </p>
+        <p>
+            <strong>Effets: </strong> Brouillard exponentiel, miroir physique
+            (<code>Reflector</code>), tone mapping ACES Filmic, vignette en
+            seconde passe, particules de poussière en <code>Points</code>, et
+            un filtre Kuwahara optionnel pour donner un rendu peinture à l'huile.
+        </p>
+        <p>
+            <strong>Interaction: </strong> Caméra orbitale à la souris, panneau
+            <code>lil-gui</code> pour régler les lumières, le brouillard et les
+            effets en direct.
+        </p>
+
+        <p> <strong> Textures Maps : </strong> Plusieurs textures maps ont été utilisers afin de rendre compte d'effets de profondeurs tout en gardant la taille de fichier bas (en n'important pas une mesh high resolution mais plutot en usant de substitus afin de mettre en volume un objet low poly).
+        <br>
+        Pour cela il existe différentes maps dont nous avons fait usage :
+        <img src="Blog-TextureMaps.png" alt="différentes maps : normal, textures, etc">
+        </p>
+    </section>
+
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://threejs.org/build/three.module.js",
+                "three/addons/": "https://threejs.org/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="module" src="objectJS/peinture.js"></script>
+</body>
+
+</html>

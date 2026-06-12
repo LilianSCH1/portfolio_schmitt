@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C4 — Gérer des données | Lilian Schmitt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <nav>
+    <a href="projects-academiques.html" class="nav-logo">← Compétences</a>
+    <ul class="nav-links">
+      <li><a href="portfolio.html#experiences">Expériences</a></li>
+      <li><a href="portfolio.html#projects">Projets</a></li>
+      <li><a href="portfolio.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav class="comp-nav">
+    <a href="projects-academiques.html" class="comp-nav-home">← Toutes</a>
+    <a href="competence-c1.html">C1</a>
+    <a href="competence-c2.html">C2</a>
+    <a href="competence-c3.html">C3</a>
+    <a href="competence-c4.html" class="active">C4</a>
+    <a href="competence-c5.html">C5</a>
+    <a href="competence-c6.html">C6</a>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-eyebrow">Compétence 04 / 06 — BUT Informatique</div>
+    <h1 class="hero-headline">
+      Gérer des données<br>
+      <em>de l'information</em>
+    </h1>
+    <p class="hero-sub">
+      Concevoir, gérer, administrer et exploiter les données de l'entreprise en respectant
+      les réglementations sur la protection des données personnelles.
+      Composantes essentielles : respecter la protection des données (RGPD), s'appuyer sur des
+      fondements mathématiques solides, assurer la cohérence et la qualité des données.
+    </p>
+    <div class="hero-scroll">Voir les preuves</div>
+    <div class="hero-year">2026</div>
+  </section>
+
+  <section class="about" id="overview">
+    <div class="about-left reveal">
+      <div class="section-label">Vue d'ensemble</div>
+      <p class="about-statement">
+        3 preuves,<br>
+        <strong>conception,<br>optimisation, terrain.</strong>
+      </p>
+    </div>
+    <div class="about-right reveal reveal-delay-2">
+      <p class="about-body">
+        Trois angles sur la gestion des données : la conception complète d'un modèle relationnel
+        avec conformité RGPD, l'optimisation des accès à une base existante (PDO, index, cache),
+        et la gestion de données géographiques sensibles en contexte professionnel — données
+        internes confidentielles articulées avec des API publiques.
+      </p>
+      <div class="project-anchor-grid">
+        <a class="skill-tag project-anchor" href="#proof-01">MyPulse — Modélisation & RGPD |</a>
+        <a class="skill-tag project-anchor" href="#proof-02">App Vote — Optimisation SQL |</a>
+        <a class="skill-tag project-anchor" href="#proof-03">Stage CENCA — Données géographiques</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-details" id="preuves">
+    <div class="section-label reveal">Preuves d'acquisition</div>
+
+    <!-- PREUVE 1 : MyPulse — BDD & RGPD -->
+    <article class="project-detail reveal reveal-delay-1" id="proof-01">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 01 / 03 — SAE S3, Janvier 2026</div>
+        <h2 class="project-title">MyPulse — Modélisation des données et conformité RGPD</h2>
+        <p class="project-summary">
+          Conception complète du modèle de données : ERD 11 entités, dictionnaire de données,
+          roadmap MVP, et rapport juridique RGPD (cartographie des traitements, mesures techniques,
+          CGU, politique de confidentialité).
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">MySQL</span>
+          <span class="cs-tag">ERD</span>
+          <span class="cs-tag">RGPD</span>
+          <span class="cs-tag">Privacy by design</span>
+          <span class="cs-tag">PDO</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>SAE S3 — produire deux livrables complémentaires : un dossier descriptif de la base (modélisation) et un rapport juridique (conformité RGPD). Cours : normalisation (1NF/2NF/3NF), RGPD, guide CNIL «Privacy by Design». Outil : draw.io pour les ERD.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li><strong>ERD 11 entités :</strong> Utilisateur, MembreCertifié, Contenu, Vote (UNIQUE sur utilisateur×contenu×catégorie), Résultats, Notification, Catégorie + 4 tables de liaison</li>
+            <li><strong>Dictionnaire de données :</strong> pour chaque attribut — type SQL, contraintes (NOT NULL, UNIQUE, DEFAULT), description métier</li>
+            <li><strong>Conformité RGPD :</strong> cartographie des données traitées (identification, technique, vote), minimisation, hachage bcrypt, séparation inscription/urne (anonymat des votes)</li>
+            <li><strong>Livrables juridiques :</strong> mentions légales, CGU, politique de confidentialité, gestion des consentements cookies</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Privacy by design : la séparation inscription/urne a été décidée dès la modélisation — pas ajoutée après coup</li>
+            <li>ERD → SQL : passage du diagramme conceptuel au schéma physique (types, index, contraintes d'intégrité)</li>
+            <li>Contraintes métier en BDD : la règle «un vote unique par utilisateur par catégorie» est une contrainte UNIQUE composite — pas du code applicatif</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot">
+              <span>Diagramme ERD complet</span>
+              <p>11 entités avec cardinalités, clés primaires/étrangères et contraintes d'intégrité.</p>
+            </div>
+            <div class="project-shot">
+              <span>Cartographie RGPD</span>
+              <p>Tableau des données traitées avec finalités, durées de conservation et mesures de protection associées.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/SAE_S3_MyPulse_HOJA_SCHMITT-Lilian.pdf" class="contact-link" target="_blank" rel="noopener">Dossier descriptif BDD (PDF)</a>
+        <a href="assets/proj_acad/list_projects/SAE_S3_MyPulse_Rapport_Juridique.pdf" class="contact-link" target="_blank" rel="noopener">Rapport juridique RGPD (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+    <!-- PREUVE 2 : App Vote — SQL & PDO -->
+    <article class="project-detail reveal" id="proof-02">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 02 / 03 — SAE S4 (volet données)</div>
+        <h2 class="project-title">App Vote — Accès sécurisé et optimisé aux données</h2>
+        <p class="project-summary">
+          Refactoring de la couche données d'une application PHP héritée : migration vers PDO
+          (requêtes préparées), élimination des N+1 par JOIN, indexation SQL, pagination
+          server-side. Résultats mesurés avant/après avec EXPLAIN.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">PDO</span>
+          <span class="cs-tag">MySQL JOIN</span>
+          <span class="cs-tag">Index SQL</span>
+          <span class="cs-tag">EXPLAIN</span>
+          <span class="cs-tag">Pagination</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>L'application héritée utilisait des concaténations SQL directes, sans index, avec des N+1 non détectés. Objectif : identifier et corriger avec métriques avant/après. Outils : EXPLAIN MySQL, documentation PDO, profiling PHP.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li><strong>PDO :</strong> remplacement de toutes les concaténations SQL par des requêtes préparées (bindParam) — élimination des risques d'injection SQL</li>
+            <li><strong>Élimination N+1 :</strong> de 4-6 requêtes/page à 1 par JOIN — ex. candidats + comptage de votes en une seule requête</li>
+            <li><strong>Indexation :</strong> EXPLAIN avant (type=ALL, rows=1500) → après CREATE INDEX (type=ref, rows=12) sur colonnes filtrées et de tri</li>
+            <li><strong>Pagination :</strong> SQL LIMIT/OFFSET (12 items/page), calcul COUNT(*) total — seule la page courante est chargée</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Mesurer avant d'optimiser : EXPLAIN révèle les goulots réels — N+1 &gt; indexation &gt; cache en termes d'impact</li>
+            <li>PDO : sécurité et performance ne s'opposent pas — les requêtes préparées sont aussi plus efficaces (plan réutilisé)</li>
+            <li>Pagination SQL vs. filtrage client : charger toutes les données puis filtrer côté client est un antipattern courant</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot">
+              <span>EXPLAIN avant / après indexation</span>
+              <p>type=ALL rows=1500 → type=ref rows=12 après CREATE INDEX — lecture sélective par index.</p>
+            </div>
+            <div class="project-shot">
+              <span>Refactoring N+1 → JOIN</span>
+              <p>Extrait de code : boucle initiale avec N requêtes vs. version refactorisée avec un seul JOIN et comptage.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/SAE_S4_App_Vote.pdf" class="contact-link" target="_blank" rel="noopener">Rapport SAE S4 (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+    <!-- PREUVE 3 : Stage CENCA — données géographiques -->
+    <article class="project-detail reveal reveal-delay-2" id="proof-03">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 03 / 03 — Stage CENCA, 2025-2026</div>
+        <h2 class="project-title">Stage CENCA — Données géographiques confidentielles & API publiques</h2>
+        <p class="project-summary">
+          Dans le cadre du développement de l'application Atlas (CENCA), gestion de données
+          sensibles internes (sites naturels, actes notariaux) tout en intégrant des API publiques
+          géographiques (IGN, cadastre). La confidentialité des données de l'association
+          devait être préservée en toutes circonstances.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">PostgreSQL + PostGIS</span>
+          <span class="cs-tag">API REST IGN</span>
+          <span class="cs-tag">API Cadastre</span>
+          <span class="cs-tag">Données géographiques</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>CENCA (Conservatoire d'espaces naturels de Champagne-Ardenne) — application Atlas remplaçant MS Access pour la gestion de 314 sites naturels protégés (5 150 ha), des actes notariaux et des données foncières. Données internes confidentielles ; API publiques : IGN (données géographiques nationales) et API cadastrale (données parcellaires). Stack : Node.js/PostgreSQL + PostGIS.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li><strong>Séparation des sources :</strong> données internes (sites, actes notariaux, propriétaires) stockées en base privée PostGIS — jamais transmises aux API externes</li>
+            <li><strong>Intégration IGN/Cadastre :</strong> les API publiques fournissent uniquement les données de référence (géolocalisation de parcelles, contours cadastraux) pour auto-compléter les formulaires</li>
+            <li><strong>PostGIS :</strong> stockage et requêtage des données géographiques (polygones de sites, coordonnées GPS) avec extensions spatiales SQL</li>
+            <li><strong>Confidentialité :</strong> aucune donnée nominative ou patrimoniale (actes, propriétaires) n'est envoyée à des services tiers — seuls les identifiants cadastraux publics transitent</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Articuler données internes sensibles et API publiques : définir précisément ce qui peut transiter hors du système et ce qui ne le peut pas</li>
+            <li>PostGIS : les données géographiques nécessitent des types et requêtes spécialisés (ST_Contains, ST_Intersects) que SQL standard ne couvre pas</li>
+            <li>Confidentialité comme contrainte de conception : chaque flux de données doit être analysé avant d'être implémenté, pas après</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot has-image">
+              <img src="assets/uploads/Lac_CENCA.jpeg" alt="Site naturel protégé — CENCA Champagne-Ardenne" loading="lazy">
+              <span>Contexte CENCA — données géographiques</span>
+              <p>314 sites naturels (5 150 ha) gérés par l'association : la nature des données (géographiques, foncières, notariales) impose une séparation stricte des flux internes et publics.</p>
+            </div>
+            <div class="project-shot">
+              <span>Architecture des données — rapport de stage</span>
+              <p>Schéma des flux : données internes PostGIS, appels API IGN/cadastre, séparation des périmètres de confidentialité — documenté dans le rapport de stage (PDF).</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/Internship_Report_SCHMITT_Lilian.pdf" class="contact-link" target="_blank" rel="noopener">Rapport de stage (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+  </section>
+
+  <div class="comp-nav-bottom">
+    <a href="competence-c3.html">← C3 — Administrer</a>
+    <span class="nav-center">C4 / 06</span>
+    <a href="competence-c5.html">C5 — Conduire →</a>
+  </div>
+
+  <footer>
+    <span class="footer-copy">Lilian Schmitt — C4 Gérer des données — 2026</span>
+    <span class="footer-status">
+      <span class="status-dot"></span>
+      Recherche d'alternance / stage active
+    </span>
+  </footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+
+</html>

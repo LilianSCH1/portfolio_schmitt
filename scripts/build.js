@@ -4,9 +4,6 @@ const path = require('path');
 const repoRoot = path.join(__dirname, '..');
 const outDir = path.join(repoRoot, 'public');
 const items = [
-  'portfolio.html',
-  'projects-academiques.html',
-  'index.html',
   'assets',
   'cv',
   'js',

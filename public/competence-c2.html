@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C2 — Optimiser des applications | Lilian Schmitt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <nav>
+    <a href="projects-academiques.html" class="nav-logo">← Compétences</a>
+    <ul class="nav-links">
+      <li><a href="portfolio.html#experiences">Expériences</a></li>
+      <li><a href="portfolio.html#projects">Projets</a></li>
+      <li><a href="portfolio.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav class="comp-nav">
+    <a href="projects-academiques.html" class="comp-nav-home">← Toutes</a>
+    <a href="competence-c1.html">C1</a>
+    <a href="competence-c2.html" class="active">C2</a>
+    <a href="competence-c3.html">C3</a>
+    <a href="competence-c4.html">C4</a>
+    <a href="competence-c5.html">C5</a>
+    <a href="competence-c6.html">C6</a>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-eyebrow">Compétence 02 / 06 — BUT Informatique</div>
+    <h1 class="hero-headline">
+      Optimiser des<br>
+      <em>applications informatiques</em>
+    </h1>
+    <p class="hero-sub">
+      Proposer des applications informatiques optimisées en fonction de critères spécifiques :
+      temps d'exécution, précision, consommation de ressources.
+      Composantes essentielles : formaliser des situations complexes, identifier les algorithmes
+      et structures adaptés, justifier les choix, valider les résultats.
+    </p>
+    <div class="hero-scroll">Voir les preuves</div>
+    <div class="hero-year">2026</div>
+  </section>
+
+  <section class="about" id="overview">
+    <div class="about-left reveal">
+      <div class="section-label">Vue d'ensemble</div>
+      <p class="about-statement">
+        4 preuves,<br>
+        <strong>du formel<br>au pratique.</strong>
+      </p>
+    </div>
+    <div class="about-right reveal reveal-delay-2">
+      <p class="about-body">
+        Cette compétence couvre deux angles : la rigueur mathématique (optimisation linéaire,
+        théorie des automates) et l'optimisation concrète d'applications réelles (performance web,
+        contraintes de taille et de fluidité en 3D). Les quatre preuves démontrent la capacité à
+        mesurer, modéliser et améliorer des systèmes selon des critères définis.
+      </p>
+      <div class="project-anchor-grid">
+        <a class="skill-tag project-anchor" href="#proof-01">Méthodes d'Optimisation |</a>
+        <a class="skill-tag project-anchor" href="#proof-02">Automates et Langages |</a>
+        <a class="skill-tag project-anchor" href="#proof-03">App Vote — Performance |</a>
+        <a class="skill-tag project-anchor" href="#proof-04">WebGL — Contraintes de taille</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-details" id="preuves">
+    <div class="section-label reveal">Preuves d'acquisition</div>
+
+    <!-- PREUVE 1 : Méthodes d'optimisation -->
+    <article class="project-detail reveal reveal-delay-1" id="proof-01">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 01 / 04 — R4.04, Mathématiques</div>
+        <h2 class="project-title">Méthodes d'Optimisation — Algorithme du Simplexe</h2>
+        <p class="project-summary">
+          Application de la programmation linéaire et du simplexe à deux problèmes d'optimisation :
+          résolution standard (8 pivots, Z optimal = 10 000) et analyse du cyclage selon la règle de pivot.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">Programmation linéaire</span>
+          <span class="cs-tag">Simplexe</span>
+          <span class="cs-tag">Dégénérescence</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>R4.04, Sujet 2 — résoudre deux problèmes de programmation linéaire par la méthode du simplexe en forme tabulaire, puis analyser le comportement face à la dégénérescence. Cours mobilisés : variables d'écart, critère d'entrée de variable, calcul du rapport de pivot, règles de Bland et Dantzig.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li><strong>Exercice 1 :</strong> 3 variables, 3 contraintes — 8 itérations de pivot jusqu'à Z = 10 000 optimal à (x₁=1, x₂=100, x₃=10 000)</li>
+            <li><strong>Exercice 2 :</strong> démonstration du cyclage avec règle D₁ (boucle infinie) vs. règle D₁' (terminaison garantie en nombre fini d'étapes)</li>
+            <li>Interprétation géométrique 3D : identification des sommets du polytope correspondant aux solutions de base</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Le choix de la règle de pivot est déterminant : une mauvaise règle peut rendre l'algorithme non-convergent</li>
+            <li>Lecture du tableau final : variables hors-base nulles, contraintes actives, valeur de Z — solution lisible directement</li>
+            <li>Lien entre algèbre (tableau du simplexe) et géométrie (déplacement sur les sommets d'un polytope convexe)</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot has-image">
+              <img src="assets/proj_acad/traces/MethodeOpti_Comp2_Trace1.png" alt="Polytope 3D — région admissible exercice 1" loading="lazy">
+              <span>Polytope de la région admissible (Ex. 1)</span>
+              <p>Représentation 3D du polytope convexe avec les sommets A–E identifiés — visualisation géométrique de l'espace des solutions admissibles.</p>
+            </div>
+            <div class="project-shot has-image">
+              <img src="assets/proj_acad/traces/MethodeOpti_Comp2_Trace2.png" alt="Polytope 3D — région admissible exercice 2" loading="lazy">
+              <span>Polytope de la région admissible (Ex. 2)</span>
+              <p>Représentation 3D de la région admissible du second problème — les faces colorées correspondent aux contraintes actives.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/Maths_Methodes_Opti.pdf" class="contact-link" target="_blank" rel="noopener">Rapport Méthodes Opti (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+    <!-- PREUVE 2 : Automates et Langages -->
+    <article class="project-detail reveal" id="proof-02">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 02 / 04 — SAE Automates et Langages</div>
+        <h2 class="project-title">Automates Finis Déterministes et Langages Réguliers</h2>
+        <p class="project-summary">
+          Construction et minimisation d'AFD paramétrés par (b, n, k), preuve de minimalité
+          par la méthode de Nerode, dérivation d'expressions régulières.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">Théorie des automates</span>
+          <span class="cs-tag">Méthode de Nerode</span>
+          <span class="cs-tag">Expressions régulières</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>SAE Automates — construire des AFD reconnaissant des langages définis par δ(r,c) = (b·r + c) mod n, minimiser ces automates par la méthode de Nerode et dériver les expressions régulières correspondantes.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li><strong>Scénario 1 (b=4, n=2, k=0) :</strong> 2 états, automate déjà minimal, expression dérivée : Di = ({0,2}*{1,3})*{0,2}*</li>
+            <li><strong>Scénario 2 (b=5, n=4, k=1) :</strong> 4 états, 20 entrées dans la table de transitions, 4 classes de Nerode confirmant la minimalité</li>
+            <li>Représentation graphique des deux automates + vérification par test de mots acceptés/refusés</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Passage d'une définition abstraite (AFD, relation de Nerode) à une construction concrète et vérifiable</li>
+            <li>Minimiser un automate = fusionner les états indiscernables — raisonnement applicable à d'autres contextes (simplification de circuits, regroupement de cas)</li>
+            <li>Validation formelle de la minimalité, pas seulement intuitive</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot has-image">
+              <img src="assets/proj_acad/traces/Automate_Comp2_Trace1.png" alt="Méthode de Nérode — classes et table de transition minimale" loading="lazy">
+              <span>Minimisation par Nérode (Scénario 1)</span>
+              <p>Table de partitionnement des classes d'équivalence (D₀, D₁) et table de transition de l'automate minimal à 2 états obtenu.</p>
+            </div>
+            <div class="project-shot">
+              <span>Expressions régulières et graphes AFD</span>
+              <p>Représentations graphiques des automates des deux scénarios et expressions régulières dérivées — rapport Automates (PDF).</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/Maths_Automates_Langages.pdf" class="contact-link" target="_blank" rel="noopener">Rapport Automates (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+    <!-- PREUVE 3 : App Vote — performance -->
+    <article class="project-detail reveal reveal-delay-2" id="proof-03">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 03 / 04 — SAE S4 (volet performance)</div>
+        <h2 class="project-title">Application de vote — Optimisation des performances</h2>
+        <p class="project-summary">
+          Optimisation mesurable d'une application PHP héritée : cache applicatif, élimination
+          des requêtes N+1, indexation SQL, minification. Résultats : LCP −33%, CLS −100%,
+          requêtes SQL −100% sur pages en cache.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">Cache PHP</span>
+          <span class="cs-tag">SQL JOIN</span>
+          <span class="cs-tag">Index SQL</span>
+          <span class="cs-tag">Lighthouse</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>SAE S4 — grille de 8 points de performance à atteindre sur l'application héritée. Approche : mesurer avec Lighthouse et le profiler PHP, identifier les goulots, corriger, re-mesurer. Chaque optimisation est documentée avec métriques avant/après.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li>Cache applicatif PHP (TTL 5 min) : 0 requête SQL émise sur les pages chaudes (−100%)</li>
+            <li>Élimination N+1 : remplacement des boucles avec requêtes imbriquées par des JOIN — de 4-6 requêtes/page à 1</li>
+            <li>Index SQL sur colonnes filtrées (catégorie, statut) : passage de full scan à index seek (EXPLAIN)</li>
+            <li>Pagination server-side (12/10 items/page), minification des assets (−30%), correction CLS par ajout de dimensions explicites sur les images</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Mesurer avant d'optimiser : EXPLAIN et Lighthouse permettent de prioriser par impact réel, pas par intuition</li>
+            <li>Hiérarchie des gains : N+1 &gt; indexation &gt; cache &gt; minification — choisir le bon levier en premier</li>
+            <li>Performance perçue (CLS, fluidité) ≠ performance technique (temps serveur) — les deux nécessitent des approches différentes</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot">
+              <span>Métriques Lighthouse</span>
+              <p>LCP 1.8s → 1.2s (−33%), CLS 0.228 → 0.000 (−100%) — résultats mesurés avant et après chaque optimisation.</p>
+            </div>
+            <div class="project-shot">
+              <span>Plans d'exécution SQL (EXPLAIN)</span>
+              <p>type=ALL rows=1500 (full scan) → type=ref rows=12 (index seek) après CREATE INDEX — gain documenté dans le rapport SAE S4.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/SAE_S4_App_Vote.pdf" class="contact-link" target="_blank" rel="noopener">Rapport SAE S4 (PDF)</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+    <!-- PREUVE 4 : WebGL — contraintes de taille et fluidité -->
+    <article class="project-detail reveal" id="proof-04">
+      <div class="project-detail-header">
+        <div class="project-kicker">Preuve 04 / 04 — R4-13, 2025-2026</div>
+        <h2 class="project-title">WebGL — Optimisation sous contrainte de taille et de fluidité</h2>
+        <p class="project-summary">
+          Réalisation d'une scène 3D Three.js avec une double contrainte : poids total du projet
+          inférieur à 2 Mo et rendu fluide et réactif pour l'utilisateur (framerate stable,
+          interactions temps réel). Ces exigences ont imposé des choix d'optimisation dès la conception.
+        </p>
+        <div class="cs-tags">
+          <span class="cs-tag">Three.js</span>
+          <span class="cs-tag">Textures procédurales</span>
+          <span class="cs-tag">Géométries paramétriques</span>
+          <span class="cs-tag">Post-processing</span>
+        </div>
+      </div>
+      <div class="project-panels">
+
+        <section class="project-section">
+          <h3>Contexte et ressources mobilisées</h3>
+          <p>Module R4-13 — scène 3D médiévale avec deux contraintes simultanées : taille totale ≤ 2 Mo (images, code, assets) et expérience fluide (pas de lag visible lors des interactions caméra et des effets temps réel). Documentation Three.js, HTML5 Canvas API pour la génération procédurale, EffectComposer pour le post-processing.</p>
+        </section>
+
+        <section class="project-section">
+          <h3>Activités et implication</h3>
+          <ul>
+            <li><strong>Contrainte taille :</strong> toutes les textures générées par code (Canvas 2D) — aucun fichier image importé, sauf le modèle OBJ du casque (géométrie complexe impossible à recréer paramétriquement)</li>
+            <li><strong>Géométries paramétriques :</strong> LatheGeometry (verre), ExtrudeGeometry (épée), BoxGeometry (table, murs) — moins coûteuses en mémoire qu'un maillage importé</li>
+            <li><strong>Fluidité :</strong> matériaux et géométries partagés entre objets similaires, chaîne de post-processing limitée aux effets essentiels (vignetage, tone mapping ACES)</li>
+            <li><strong>Interactions réactives :</strong> caméra orbitale fluide, panneau lil-gui sans impact visible sur le framerate</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Apprentissages clés</h3>
+          <ul>
+            <li>Optimiser dès la conception : la limite de 2 Mo a orienté chaque choix technique (procédural vs. import, partage de matériaux)</li>
+            <li>Comprendre les compromis : une texture procédurale est moins lourde mais plus longue à générer — choix selon le type d'objet</li>
+            <li>Fluidité 3D = gestion des ressources GPU : géométries et matériaux partagés, draw calls minimisés</li>
+          </ul>
+        </section>
+
+        <section class="project-section">
+          <h3>Traces sélectionnées</h3>
+          <div class="project-screens">
+            <div class="project-shot has-image">
+              <img src="assets/proj_acad/list_projects/GUESMI_SCHMITT/medieval_tableau.png" alt="Scène WebGL rendue — contrainte 2 Mo respectée" loading="lazy">
+              <span>Rendu final — contrainte 2 Mo respectée</span>
+              <p>Scène complète avec textures procédurales, effets et modèle OBJ — entièrement sous la limite de 2 Mo.</p>
+            </div>
+            <div class="project-shot has-image">
+              <img src="assets/proj_acad/list_projects/GUESMI_SCHMITT/Blog-TextureMaps.png" alt="Diagramme des textures procédurales" loading="lazy">
+              <span>Textures générées par Canvas</span>
+              <p>Cartographie des textures créées par code (pierre, bois, flamme, parchemin) — aucun fichier image externe pour les surfaces majeures.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="project-links">
+        <a href="assets/proj_acad/list_projects/GUESMI_SCHMITT/index.html" class="contact-link" target="_blank" rel="noopener">Ouvrir le projet WebGL</a>
+        <a href="#top" class="contact-link">Retour en haut</a>
+      </div>
+    </article>
+
+  </section>
+
+  <div class="comp-nav-bottom">
+    <a href="competence-c1.html">← C1 — Réaliser</a>
+    <span class="nav-center">C2 / 06</span>
+    <a href="competence-c3.html">C3 — Administrer →</a>
+  </div>
+
+  <footer>
+    <span class="footer-copy">Lilian Schmitt — C2 Optimiser des applications — 2026</span>
+    <span class="footer-status">
+      <span class="status-dot"></span>
+      Recherche d'alternance / stage active
+    </span>
+  </footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+
+</html>

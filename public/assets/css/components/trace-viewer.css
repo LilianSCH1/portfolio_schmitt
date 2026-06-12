@@ -1,0 +1,111 @@
+.project-shot.has-image {
+  cursor: zoom-in;
+}
+
+.project-shot.has-image:hover {
+  border-color: rgba(200, 184, 154, 0.45);
+  background: linear-gradient(180deg, rgba(200, 184, 154, 0.13), rgba(255, 255, 255, 0.04));
+}
+
+.project-shot.has-image:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Modal */
+
+.trace-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background: rgba(4, 4, 4, 0.97);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+}
+
+.trace-modal.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.trace-modal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 28px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.trace-modal-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trace-modal-close {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: 1px solid transparent;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.trace-modal-close:hover {
+  color: var(--accent);
+  border-color: rgba(200, 184, 154, 0.35);
+}
+
+.trace-modal-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 40px;
+  overflow: auto;
+}
+
+.trace-modal-img {
+  max-width: 100%;
+  max-height: calc(100vh - 180px);
+  object-fit: contain;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.trace-modal-desc {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.7;
+  max-width: 640px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .trace-modal-bar {
+    padding: 10px 16px;
+  }
+
+  .trace-modal-body {
+    padding: 24px 16px;
+  }
+}

@@ -8,6 +8,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 28px 48px;
+  background: rgba(11, 14, 20, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(8px);
   mix-blend-mode: normal;
 }
 

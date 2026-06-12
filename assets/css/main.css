@@ -5,6 +5,9 @@
 @import url('./components/navigation.css');
 @import url('./components/section-label.css');
 @import url('./components/work-card.css');
+@import url('./components/comp-nav.css');
+@import url('./components/pdf-viewer.css');
+@import url('./components/trace-viewer.css');
 @import url('./components/footer.css');
 @import url('./sections/hero.css');
 @import url('./sections/about.css');

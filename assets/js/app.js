@@ -1,7 +1,13 @@
 import { initCustomCursor } from './modules/cursor.js';
 import { initScrollReveal } from './modules/reveal.js';
+import { initPdfViewer } from './modules/pdf-viewer.js';
+import { initTraceViewer } from './modules/trace-viewer.js';
 
 function wrapTextWithLetters(element, letterClass = 'nav-letter') {
+  if (!element.closest || !element.closest('nav')) {
+    return;
+  }
+
   if (element.dataset.ledReady === 'true') {
     return;
   }
@@ -30,7 +36,7 @@ function wrapTextWithLetters(element, letterClass = 'nav-letter') {
 }
 
 function initHeaderLedAnimation() {
-  const targets = document.querySelectorAll('.nav-logo, .nav-links a');
+  const targets = document.querySelectorAll('nav .nav-logo, nav .nav-links a');
   const letters = [];
 
   targets.forEach((element) => {
@@ -87,4 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCustomCursor();
   initScrollReveal();
   initHeaderLedAnimation();
+  initPdfViewer();
+  initTraceViewer();
 });
