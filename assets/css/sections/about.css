@@ -1,70 +1,124 @@
-/* Profil (accueil) et « Vue d'ensemble » (pages compétences) */
-.about {
+/* ── À propos (accueil) ──────────────────────────────── */
+.about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 32px 64px;
-  align-items: start;
+  grid-template-columns: 260px 1fr;
+  gap: 56px;
+  padding-top: 56px;
 }
 
-.about-statement {
+.about-side {
+  display: grid;
+  align-content: start;
+  gap: 22px;
+  padding-right: 32px;
+  border-right: 1px solid var(--line);
+}
+
+.about-side dt {
+  margin-bottom: 4px;
+}
+
+.about-side dd {
   color: var(--ink);
-  font-size: clamp(26px, 3vw, 36px);
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.about-lead {
+  max-width: 900px;
+  color: var(--ink);
+  font-size: clamp(26px, 3.2vw, 44px);
+  font-weight: 300;
   line-height: 1.15;
   letter-spacing: -0.03em;
 }
 
+.about-lead strong {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+.about-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.about-cols strong {
+  color: var(--ink);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.stack span {
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.stack span:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+/* ── « Vue d'ensemble » (pages compétences) ──────────── */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 32px 64px;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-statement {
+  color: var(--ink);
+  font-size: clamp(30px, 3.6vw, 48px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
 .about-statement strong {
-  font-weight: 700;
+  font-weight: 800;
   color: var(--accent);
 }
 
 .about-body {
-  max-width: 620px;
+  max-width: 640px;
   margin-bottom: 24px;
   font-size: 17px;
 }
 
-.skills {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.skills > div {
-  padding: 16px 18px;
-  border-radius: var(--radius-sm);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-sm);
-}
-
-.skills dt {
-  margin-bottom: 6px;
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.skills dd {
-  color: var(--text);
-  font-size: 14px;
-}
-
-/* Ancres de projets (pages compétences) */
 .skill-tag {
-  padding: 7px 14px;
-  border-radius: 999px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-sm);
+  padding: 8px 16px;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
   color: var(--ink);
-  font-size: 14px;
-  font-weight: 500;
-  transition: border-color 0.2s, color 0.2s;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .skill-tag:hover {
+  background: var(--accent);
   border-color: var(--accent);
-  color: var(--accent);
+  color: #fff;
 }

@@ -1,33 +1,28 @@
-/* Clair et doux : fond gris perle, cartes blanches, un seul accent bleu */
+/* Gris clair, encre, un seul accent orange */
 :root {
-  --bg: #f5f6f8;
-  --surface: #ffffff;
-  --soft: #eef0f4;
-  --ink: #0f172a;
-  --text: #334155;
-  --muted: #64748b;
-  --line: #e4e7ec;
-  --accent: #3b5bfd;
-  --accent-dark: #2a3fcf;
-  --accent-soft: #eef1ff;
+  --bg: #ebebeb;
+  --paper: #f3f3f3;
+  --soft: #e0e0e0;
+  --ink: #111111;
+  --text: #2b2b2b;
+  --muted: #7a7a7a;
+  --line: rgba(17, 17, 17, 0.16);
+  --accent: #ff5722;
+  --accent-soft: rgba(255, 87, 34, 0.18);
+  --dark: #171717;
 
-  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --font: 'Manrope', system-ui, -apple-system, sans-serif;
 
-  --max: 1120px;
-  --gutter: 32px;
-  --nav-h: 68px;
-  --radius: 18px;
-  --radius-sm: 12px;
-  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-
-  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05), 0 1px 1px rgba(15, 23, 42, 0.03);
-  --shadow-md: 0 2px 4px rgba(15, 23, 42, 0.04), 0 12px 32px -12px rgba(15, 23, 42, 0.18);
-  --shadow-lg: 0 4px 8px rgba(15, 23, 42, 0.04), 0 24px 56px -20px rgba(15, 23, 42, 0.28);
+  --max: 1280px;
+  --gutter: 48px;
+  --nav-h: 96px;
+  --radius: 999px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--nav-h) + 24px);
+  scroll-padding-top: 110px;
 }
 
 body {
@@ -35,8 +30,7 @@ body {
   color: var(--text);
   font-family: var(--font);
   font-size: 16px;
-  line-height: 1.65;
-  font-feature-settings: 'cv11', 'ss01';
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -45,8 +39,8 @@ h1,
 h2,
 h3 {
   color: var(--ink);
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-weight: 800;
+  letter-spacing: -0.03em;
 }
 
 a {
@@ -61,7 +55,6 @@ a {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 6px;
 }
 
 sup {
@@ -70,11 +63,16 @@ sup {
   vertical-align: 0.7em;
 }
 
-/* Mot mis en valeur : dégradé dans la couleur d'accent */
 em {
   font-style: normal;
-  background: linear-gradient(100deg, var(--accent) 10%, #7b5cff 90%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
+}
+
+/* Libellé en petites capitales */
+.caps {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
