@@ -80,6 +80,64 @@ function initPreview() {
   });
 }
 
+// Lettres du nom : chaque lettre roule vers une copie orange au survol.
+function initLetters() {
+  const lines = document.querySelectorAll('.hero-name .line > span');
+  if (!lines.length) {
+    return;
+  }
+
+  const chars = [];
+  lines.forEach((line) => {
+    [...line.childNodes].forEach((node) => {
+      if (node.nodeType !== Node.TEXT_NODE || !node.textContent.trim()) {
+        return;
+      }
+      const fragment = document.createDocumentFragment();
+      for (const letter of node.textContent.trim()) {
+        const char = document.createElement('span');
+        char.className = 'char';
+        char.setAttribute('aria-hidden', 'true');
+        char.innerHTML = `<span class="char-roll"><span>${letter}</span><span class="char-alt">${letter}</span></span>`;
+        fragment.appendChild(char);
+        chars.push(char);
+      }
+      node.replaceWith(fragment);
+    });
+  });
+
+  chars.forEach((char) => {
+    let timer = 0;
+    char.addEventListener('mouseenter', () => {
+      clearTimeout(timer);
+      char.classList.add('is-on');
+    });
+    char.addEventListener('mouseleave', () => {
+      timer = setTimeout(() => char.classList.remove('is-on'), 260);
+    });
+  });
+
+  if (reducedMotion) {
+    return;
+  }
+
+  // Vague de couleur sur toutes les lettres
+  const wave = () => {
+    chars.forEach((char, i) => {
+      setTimeout(() => {
+        char.classList.add('is-on');
+        setTimeout(() => char.classList.remove('is-on'), 520);
+      }, i * 55);
+    });
+  };
+  setTimeout(wave, 1300);
+
+  // Sans survol possible (écran tactile), la vague repasse régulièrement
+  if (window.matchMedia('(hover: none)').matches) {
+    setInterval(wave, 7000);
+  }
+}
+
 function initClock() {
   const el = document.querySelector('[data-clock]');
   if (!el) {
@@ -95,6 +153,7 @@ function initClock() {
 }
 
 export function initHome() {
+  initLetters();
   initTyped();
   initPreview();
   initClock();

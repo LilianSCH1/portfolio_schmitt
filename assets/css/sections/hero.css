@@ -39,12 +39,6 @@
   text-transform: uppercase;
 }
 
-.hero-name span {
-  display: flex;
-  align-items: center;
-  gap: 0.12em;
-}
-
 .hero-name .line {
   display: block;
   overflow: hidden;
@@ -53,6 +47,7 @@
 
 .hero-name .line > span {
   display: inline-flex;
+  align-items: center;
   animation: lineUp 1s var(--ease) both;
 }
 
@@ -60,9 +55,44 @@
   animation-delay: 0.12s;
 }
 
+/* Lettres qui roulent vers une copie orange (home.js) */
+.char {
+  position: relative;
+  display: inline-block;
+  height: 0.9em;
+  line-height: 0.9em;
+  overflow: hidden;
+  cursor: default;
+}
+
+.char-roll {
+  display: block;
+  transition: transform 0.55s var(--ease);
+}
+
+.char-roll > span {
+  display: block;
+}
+
+.char-alt {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: var(--accent);
+}
+
+.char.is-on .char-roll {
+  transform: translateY(-100%);
+}
+
+.hero-name .line + .line {
+  margin-top: -0.04em;
+}
+
 /* Badge rond qui tourne */
 .badge {
   position: relative;
+  margin-left: 0.12em;
   flex-shrink: 0;
   display: grid;
   place-items: center;
