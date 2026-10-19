@@ -139,13 +139,13 @@ a.row:hover .row-meta {
   isolation: isolate;
 }
 
-/* remplissage orange au survol */
+/* fond clair qui monte au survol, sans aplat orange */
 .comp-cell::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--accent);
+  background: var(--paper);
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.45s var(--ease);
@@ -155,10 +155,27 @@ a.row:hover .row-meta {
   transform: scaleY(1);
 }
 
-.comp-cell:hover,
-.comp-cell:hover .comp-name,
-.comp-cell:hover .comp-num {
-  color: #fff;
+.comp-cell::after {
+  content: '→';
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  font-size: 15px;
+  opacity: 0;
+  transform: translate(-8px, 8px);
+  transition: opacity 0.3s, transform 0.4s var(--ease);
+}
+
+.comp-cell:hover::after {
+  opacity: 1;
+  transform: none;
 }
 
 .comp-num {
@@ -166,7 +183,6 @@ a.row:hover .row-meta {
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.08em;
-  transition: color 0.3s;
 }
 
 .comp-name {
@@ -176,7 +192,11 @@ a.row:hover .row-meta {
   line-height: 1.05;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  transition: color 0.3s;
+  transition: transform 0.45s var(--ease);
+}
+
+.comp-cell:hover .comp-name {
+  transform: translateX(6px);
 }
 
 .comp-proofs {
