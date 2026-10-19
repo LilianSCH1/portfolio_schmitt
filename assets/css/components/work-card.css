@@ -139,13 +139,13 @@ a.row:hover .row-meta {
   isolation: isolate;
 }
 
-/* fond clair qui monte au survol, sans aplat orange */
+/* fond orange adouci (pêche) qui monte au survol */
 .comp-cell::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--paper);
+  background: var(--accent-soft);
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.45s var(--ease);
@@ -165,8 +165,8 @@ a.row:hover .row-meta {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1.5px solid var(--ink);
-  color: var(--ink);
+  background: var(--accent);
+  color: #fff;
   font-size: 15px;
   opacity: 0;
   transform: translate(-8px, 8px);
