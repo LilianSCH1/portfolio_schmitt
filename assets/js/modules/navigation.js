@@ -5,6 +5,11 @@ export function initNavigation() {
     return;
   }
 
+  // Filet sous la barre dès qu'on a défilé
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
   // Bouton « Menu » pour les petits écrans
   if (!list.id) {
     list.id = 'nav-links';

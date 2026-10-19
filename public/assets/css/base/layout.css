@@ -1,32 +1,22 @@
-main {
-  display: block;
-}
-
 section {
   position: relative;
-  padding: 72px var(--gutter);
   max-width: calc(var(--max) + var(--gutter) * 2);
   margin: 0 auto;
+  padding: 72px var(--gutter);
 }
 
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 24px 48px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+/* Section en deux colonnes : étiquette à gauche, contenu à droite */
+.split {
+  display: grid;
+  grid-template-columns: var(--aside) 1fr;
+  gap: 32px;
+  border-top: 1px solid var(--line);
 }
 
-.section-title {
-  font-size: clamp(38px, 5.4vw, 72px);
-  font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.035em;
+.split > .section-label {
+  padding-top: 4px;
 }
 
-.section-intro {
-  max-width: 420px;
-  color: var(--muted);
-  font-size: 16px;
+.split-body {
+  min-width: 0;
 }
