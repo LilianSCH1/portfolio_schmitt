@@ -60,6 +60,19 @@ export function initTraceViewer() {
     if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
   });
 
+  // Agrandissable au clavier aussi
+  document.querySelectorAll('.project-shot.has-image').forEach((shot) => {
+    shot.tabIndex = 0;
+    shot.setAttribute('role', 'button');
+    shot.setAttribute('aria-label', `Agrandir : ${shot.querySelector('span')?.textContent ?? 'trace'}`);
+    shot.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        open(shot);
+      }
+    });
+  });
+
   document.addEventListener('click', (e) => {
     const shot = e.target.closest('.project-shot.has-image');
     if (!shot) return;
