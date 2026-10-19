@@ -80,13 +80,13 @@
   max-width: 100%;
   max-height: calc(100vh - 200px);
   object-fit: contain;
-  border-radius: var(--radius);
+  border-radius: 14px;
 }
 
 .trace-modal-desc {
   max-width: 640px;
   padding: 14px 20px;
-  border-radius: var(--radius);
+  border-radius: 14px;
   background: var(--bg);
   font-size: 15px;
   text-align: center;

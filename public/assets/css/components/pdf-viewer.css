@@ -77,7 +77,7 @@
 .pdf-modal-body {
   flex: 1;
   overflow: hidden;
-  border-radius: var(--radius);
+  border-radius: 14px;
 }
 
 .pdf-modal-body iframe {

@@ -1,8 +1,8 @@
-/* Apparition discrète, uniquement si le JS tourne */
+/* Apparition par glissement, uniquement si le JS tourne */
 .js .reveal {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  transform: translateY(40px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 
 .js .reveal.visible {
@@ -11,17 +11,17 @@
 }
 
 .reveal-delay-1 {
-  transition-delay: 0.06s;
+  transition-delay: 0.08s;
 }
 
 .reveal-delay-2 {
-  transition-delay: 0.12s;
+  transition-delay: 0.16s;
 }
 
 .reveal-delay-3 {
-  transition-delay: 0.18s;
+  transition-delay: 0.24s;
 }
 
 .reveal-delay-4 {
-  transition-delay: 0.24s;
+  transition-delay: 0.32s;
 }

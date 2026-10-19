@@ -2,24 +2,38 @@ section {
   position: relative;
   max-width: calc(var(--max) + var(--gutter) * 2);
   margin: 0 auto;
-  padding: 64px var(--gutter);
+  padding: 120px var(--gutter);
 }
 
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 16px 48px;
-  flex-wrap: wrap;
-  margin-bottom: 36px;
+/* Grand titre de section sur deux lignes, la seconde en orange */
+.big-title {
+  font-size: clamp(38px, 10.5vw, 150px);
+  font-weight: 800;
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
 }
 
-.section-title {
-  font-size: clamp(30px, 3.6vw, 42px);
-  line-height: 1.1;
+.big-title span {
+  display: block;
 }
 
-.section-intro {
-  max-width: 400px;
-  color: var(--muted);
+.big-title span + span {
+  color: var(--accent);
+  padding-left: 0.6em;
+}
+
+.big-title.is-right {
+  text-align: right;
+}
+
+.big-title.is-right span + span {
+  padding-left: 0;
+  padding-right: 0.4em;
+}
+
+.section-top {
+  padding-bottom: 56px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--line);
 }

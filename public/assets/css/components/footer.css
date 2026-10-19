@@ -1,29 +1,23 @@
+/* Pied de page des pages secondaires */
 footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 8px 24px;
-  max-width: calc(var(--max) + var(--gutter) * 2);
-  margin: 0 auto;
-  padding: 28px var(--gutter) 40px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 14px;
+  gap: 12px 24px;
+  padding: 32px max(var(--gutter), calc((100% - var(--max)) / 2));
+  background: var(--dark);
+  color: #8a8a8a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .footer-status {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-}
-
-.footer-top {
-  text-decoration: none;
-}
-
-.footer-top:hover {
-  color: var(--ink);
+  gap: 10px;
 }
 
 .status-dot {
@@ -32,6 +26,6 @@ footer {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+  background: var(--accent);
+  animation: pulse 2s infinite;
 }
