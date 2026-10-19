@@ -2,24 +2,14 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 8px 24px;
   max-width: calc(var(--max) + var(--gutter) * 2);
   margin: 0 auto;
   padding: 28px var(--gutter) 40px;
+  border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 14px;
-}
-
-footer > * {
-  border-top: 0;
-}
-
-footer::before {
-  content: '';
-  flex-basis: 100%;
-  height: 1px;
-  margin-bottom: 20px;
-  background: var(--line);
 }
 
 .footer-status {
@@ -38,8 +28,10 @@ footer::before {
 
 .status-dot {
   display: inline-block;
-  width: 7px;
-  height: 7px;
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--accent);
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
 }
