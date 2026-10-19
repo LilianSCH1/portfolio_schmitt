@@ -1,64 +1,48 @@
-/* Palette « Strates Lentes » : noir chaud, gris pierre, accent sable, touche braise */
+/* Direction « Atelier clair » : papier froid, encre, cobalt, citron */
 :root {
-  --ink: #0c0b0a;
-  --stone-1: #141311;
-  --stone-2: #1a1917;
-  --stone-3: #2a2824;
-  --stone-4: #3a3833;
-  --ash: #8c877c;
-  --text: #d9d3c7;
-  --bright: #ece6da;
-  --sand: #c8b89a;
-  --sand-dim: rgba(200, 184, 154, 0.14);
-  --sand-line: rgba(200, 184, 154, 0.38);
-  --ember: #d4553a;
-  --line: rgba(236, 230, 218, 0.09);
-  --line-strong: rgba(236, 230, 218, 0.18);
+  --bg: #f3f3ef;
+  --surface: #ffffff;
+  --surface-2: #e9e9e3;
+  --ink: #111114;
+  --ink-2: #2a2a30;
+  --muted: #5d5d68;
+  --line: rgba(17, 17, 20, 0.1);
+  --line-strong: rgba(17, 17, 20, 0.22);
+  --blue: #2f45ff;
+  --blue-soft: #e4e7ff;
+  --lime: #d6ff3f;
+  --orange: #ff6a3d;
 
-  --serif: 'Instrument Serif', Georgia, serif;
-  --sans: 'Instrument Sans', system-ui, sans-serif;
-  --mono: 'DM Mono', ui-monospace, monospace;
+  --display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
 
-  --nav-h: 64px;
-  --gutter: 48px;
-  --max: 1180px;
-  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --radius: 22px;
+  --radius-sm: 12px;
+  --gutter: 32px;
+  --max: 1240px;
+  --nav-h: 76px;
+  --ease: cubic-bezier(0.2, 0.9, 0.25, 1);
+  --shadow: 0 1px 0 rgba(17, 17, 20, 0.04), 0 12px 32px -18px rgba(17, 17, 20, 0.28);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--nav-h) + 16px);
+  scroll-padding-top: calc(var(--nav-h) + 24px);
 }
 
 body {
-  background: var(--ink);
-  color: var(--text);
-  font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.65;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 17px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* grain minéral */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 220px;
-}
-
-body > * {
-  position: relative;
-  z-index: 1;
-}
-
 ::selection {
-  background: var(--sand);
+  background: var(--lime);
   color: var(--ink);
 }
 
@@ -67,12 +51,23 @@ a {
 }
 
 :focus-visible {
-  outline: 1px solid var(--sand);
+  outline: 3px solid var(--blue);
   outline-offset: 3px;
+  border-radius: 6px;
 }
 
-em {
-  font-family: var(--serif);
-  font-style: italic;
-  color: var(--sand);
+sup {
+  font-size: 0.5em;
+  line-height: 0;
+  vertical-align: 0.85em;
+}
+
+/* Mot surligné au marqueur citron */
+em,
+.mark {
+  font-style: normal;
+  background: linear-gradient(transparent 58%, var(--lime) 58%, var(--lime) 92%, transparent 92%);
+  padding: 0 0.08em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }

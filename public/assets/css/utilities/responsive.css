@@ -1,48 +1,69 @@
 @media (max-width: 1100px) {
+  .tile-intro {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 0;
+  }
+
+  .tile-status,
+  .tile-stack {
+    grid-column: span 6;
+    min-height: 220px;
+  }
+
   .about {
     grid-template-columns: 1fr;
-    gap: 40px;
+  }
+
+  .skill-cards,
+  .comp-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 900px) {
   :root {
-    --gutter: 24px;
+    --gutter: 20px;
   }
 
   section {
-    padding-top: 88px;
-    padding-bottom: 88px;
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
 
   .contact-cards {
     grid-template-columns: 1fr;
   }
 
-  .hero-meta {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+  .contact-panel {
+    padding: 44px 24px;
+  }
+
+  .contact-panel::after {
+    display: none;
   }
 }
 
-/* Menu mobile (le bouton est ajouté par app.js) */
-@media (max-width: 820px) {
+/* Menu mobile (bouton ajouté par app.js) */
+@media (max-width: 860px) {
   .js .nav-toggle {
     display: inline-flex;
   }
 
   .js .nav-links {
     position: absolute;
-    top: var(--nav-h);
+    top: calc(100% + 8px);
     left: 0;
     right: 0;
+    display: none;
     flex-direction: column;
     align-items: stretch;
-    gap: 0;
-    padding: 8px var(--gutter) 20px;
-    background: rgba(12, 11, 10, 0.97);
-    border-bottom: 1px solid var(--line);
-    display: none;
+    gap: 2px;
+    padding: 8px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
   }
 
   .js nav.is-open .nav-links {
@@ -50,24 +71,20 @@
   }
 
   .js .nav-links a {
-    padding: 14px 0;
-    border: 0;
-    border-bottom: 1px solid var(--line);
-    font-size: 12px;
+    padding: 14px 18px;
+    font-size: 17px;
   }
 
   .js .nav-links a.nav-cta {
-    margin: 14px 0 0;
-    padding: 14px;
+    margin: 6px 0 0;
     text-align: center;
   }
 
-  /* sans JS : les liens passent à la ligne */
   html:not(.js) nav:not(.comp-nav) {
     height: auto;
     flex-wrap: wrap;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 10px;
+    border-radius: var(--radius);
   }
 
   html:not(.js) .nav-links {
@@ -75,40 +92,43 @@
   }
 }
 
-@media (max-width: 600px) {
-  :root {
-    --gutter: 16px;
+@media (max-width: 720px) {
+  .bento > .tile {
+    grid-column: 1 / -1;
   }
 
-  .hero {
-    padding-top: 64px;
-    padding-bottom: 96px;
+  .tile-intro {
+    padding: 28px 22px;
   }
 
-  .hero-grid-overlay {
-    width: 120vw;
-    right: -50vw;
-    top: 30%;
-    opacity: 0.5;
-  }
-
-  .hero-meta {
+  .skill-cards,
+  .comp-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 48px;
   }
 
-  .hero-actions .btn {
+  .hero-eyebrow,
+  .hero-headline,
+  .hero-sub {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .hero-eyebrow {
+    margin-top: 32px;
+  }
+
+  .hero-scroll {
+    margin: 28px 24px 32px;
+  }
+
+  .hero-year {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-actions .btn {
     flex: 1 1 100%;
     justify-content: center;
-  }
-
-  .skill-row {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .pin-name {
-    font-size: 17px;
   }
 }

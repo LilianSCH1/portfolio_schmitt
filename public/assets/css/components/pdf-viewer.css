@@ -4,7 +4,11 @@
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  background: rgba(4, 4, 4, 0.96);
+  padding: 16px;
+  gap: 10px;
+  background: rgba(17, 17, 20, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.22s ease;
@@ -20,74 +24,78 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 12px 28px;
-  background: var(--stone-1);
-  border-bottom: 1px solid var(--border);
+  padding: 8px 8px 8px 20px;
+  border-radius: 999px;
+  background: var(--surface);
   flex-shrink: 0;
 }
 
 .pdf-modal-title {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ash);
+  max-width: 60%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 60%;
+  font-weight: 600;
 }
 
 .pdf-modal-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   flex-shrink: 0;
 }
 
 .pdf-modal-newtab,
 .pdf-modal-close {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--ash);
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 0;
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
-  background: none;
-  border: 1px solid transparent;
-  padding: 5px 12px;
-  cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
   white-space: nowrap;
+  cursor: pointer;
+}
+
+.pdf-modal-newtab {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.pdf-modal-close {
+  background: var(--ink);
+  color: var(--surface);
 }
 
 .pdf-modal-newtab:hover,
 .pdf-modal-close:hover {
-  color: var(--sand);
-  border-color: rgba(200, 184, 154, 0.35);
+  background: var(--lime);
+  color: var(--ink);
 }
 
 .pdf-modal-body {
   flex: 1;
   overflow: hidden;
+  border-radius: var(--radius);
 }
 
 .pdf-modal-body iframe {
+  display: block;
   width: 100%;
   height: 100%;
   border: none;
-  display: block;
   background: #fff;
 }
 
 @media (max-width: 600px) {
-  .pdf-modal-bar {
-    padding: 10px 16px;
+  .pdf-modal {
+    padding: 8px;
   }
 
   .pdf-modal-title {
-    max-width: 40%;
-    font-size: 9px;
+    max-width: 45%;
+    font-size: 14px;
   }
 
   .pdf-modal-newtab {

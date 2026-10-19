@@ -1,152 +1,95 @@
-.contact {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.contact-panel {
   position: relative;
   overflow: hidden;
+  padding: 64px 56px;
+  border-radius: calc(var(--radius) + 8px);
+  background: var(--ink);
+  color: var(--surface);
 }
 
-/* Écho des courbes de niveau */
-.contact-glow {
+/* grand cercle citron décoratif */
+.contact-panel::after {
+  content: '';
   position: absolute;
-  bottom: -160px;
   right: -120px;
-  width: 640px;
-  height: 640px;
+  bottom: -160px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
-  background: repeating-radial-gradient(circle, transparent 0 22px, rgba(140, 135, 124, 0.12) 22px 23px);
-  mask-image: radial-gradient(circle, #000 20%, transparent 70%);
-  -webkit-mask-image: radial-gradient(circle, #000 20%, transparent 70%);
+  background: var(--lime);
   pointer-events: none;
 }
 
+.contact-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-panel .section-label {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: var(--surface);
+}
+
 .contact-big {
-  font-family: var(--serif);
-  font-size: clamp(44px, 7.4vw, 108px);
-  font-weight: 400;
+  max-width: 16ch;
+  margin-bottom: 40px;
+  font-size: clamp(42px, 6.6vw, 96px);
+  font-weight: 800;
   line-height: 0.98;
-  letter-spacing: -0.02em;
-  color: var(--bright);
-  max-width: 980px;
-  margin-bottom: 56px;
+  letter-spacing: -0.05em;
+}
+
+.contact-big em {
+  padding: 0;
+  background: none;
+  color: var(--lime);
 }
 
 .contact-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
-  max-width: 980px;
+  max-width: 920px;
 }
 
 .contact-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 22px;
-  border: 1px solid var(--line-strong);
-  background: rgba(20, 19, 17, 0.8);
+  gap: 6px;
+  padding: 20px 22px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
   text-decoration: none;
-  transition: border-color 0.25s, transform 0.25s var(--ease);
+  transition: transform 0.25s var(--ease), background 0.25s;
 }
 
-.contact-card:hover {
-  border-color: var(--sand);
+a.contact-card:hover {
   transform: translateY(-3px);
+  background: var(--lime);
 }
 
 .contact-card-label {
   font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ash);
+  font-size: 12px;
+  color: var(--muted);
 }
 
 .contact-card-value {
-  color: var(--bright);
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: 700;
   overflow-wrap: anywhere;
 }
 
 .contact-card-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-top: auto;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--sand);
-}
-
-.copy-btn {
-  background: none;
-  border: 1px solid var(--sand-line);
-  color: var(--sand);
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.copy-btn:hover,
-.copy-btn.is-done {
-  background: var(--sand);
-  color: var(--ink);
-}
-
-.contact-aside {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-.contact-aside p {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--ash);
-}
-
-.contact-aside strong {
-  color: var(--text);
-  font-weight: 400;
-  margin-right: 8px;
-}
-
-/* Liens texte (pages compétences, projets) */
-.contact-link {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border: 1px solid var(--line-strong);
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.contact-link:hover {
-  color: var(--sand);
-  border-color: var(--sand);
-}
-
-.contact-link[href$=".pdf"]::before {
-  content: 'PDF';
-  font-size: 9px;
-  color: var(--ink);
-  background: var(--sand);
-  padding: 1px 5px;
-  letter-spacing: 0.1em;
+  padding-top: 10px;
+  font-weight: 600;
+  color: var(--blue);
 }
 
 .contact-card-action a {
@@ -155,5 +98,72 @@
 }
 
 .contact-card-action a:hover {
-  color: var(--bright);
+  text-decoration: underline;
+}
+
+.copy-btn {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.copy-btn:hover,
+.copy-btn.is-done {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.contact-aside {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.contact-aside p {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+}
+
+.contact-aside strong {
+  margin-right: 6px;
+  color: var(--lime);
+  font-weight: 600;
+}
+
+/* Liens-boutons (pages compétences) */
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-link:hover {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.contact-link[href$=".pdf"]::before {
+  content: 'PDF';
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10px;
 }

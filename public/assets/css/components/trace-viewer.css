@@ -3,24 +3,21 @@
 }
 
 .project-shot.has-image:hover {
-  border-color: rgba(200, 184, 154, 0.45);
-  background: var(--stone-3);
+  border-color: var(--ink);
 }
 
-.project-shot.has-image:focus-visible {
-  outline: 1px solid var(--sand);
-  outline-offset: 2px;
-}
-
-/* Modal */
-
+/* Modale */
 .trace-modal {
   position: fixed;
   inset: 0;
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  background: rgba(4, 4, 4, 0.97);
+  padding: 16px;
+  gap: 10px;
+  background: rgba(17, 17, 20, 0.86);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.22s ease;
@@ -36,41 +33,35 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 12px 28px;
-  background: var(--stone-1);
-  border-bottom: 1px solid var(--border);
+  padding: 8px 8px 8px 20px;
+  border-radius: 999px;
+  background: var(--surface);
   flex-shrink: 0;
 }
 
 .trace-modal-label {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ash);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-weight: 600;
 }
 
 .trace-modal-close {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--ash);
-  background: none;
-  border: 1px solid transparent;
-  padding: 5px 12px;
-  cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
-  white-space: nowrap;
   flex-shrink: 0;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--ink);
+  color: var(--surface);
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .trace-modal-close:hover {
-  color: var(--sand);
-  border-color: rgba(200, 184, 154, 0.35);
+  background: var(--lime);
+  color: var(--ink);
 }
 
 .trace-modal-body {
@@ -79,33 +70,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  padding: 40px;
+  gap: 20px;
+  padding: 24px;
   overflow: auto;
 }
 
 .trace-modal-img {
-  max-width: 100%;
-  max-height: calc(100vh - 180px);
-  object-fit: contain;
   display: block;
-  border: 1px solid var(--border);
+  max-width: 100%;
+  max-height: calc(100vh - 200px);
+  object-fit: contain;
+  border-radius: var(--radius-sm);
 }
 
 .trace-modal-desc {
-  font-size: 14px;
-  color: var(--text);
-  line-height: 1.7;
   max-width: 640px;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-size: 15px;
   text-align: center;
 }
 
 @media (max-width: 600px) {
-  .trace-modal-bar {
-    padding: 10px 16px;
+  .trace-modal {
+    padding: 8px;
   }
 
   .trace-modal-body {
-    padding: 24px 16px;
+    padding: 16px 4px;
   }
 }

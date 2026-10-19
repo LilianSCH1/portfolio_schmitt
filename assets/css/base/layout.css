@@ -1,32 +1,32 @@
+main {
+  display: block;
+}
+
 section {
-  padding: 120px var(--gutter);
   position: relative;
+  padding: 72px var(--gutter);
+  max-width: calc(var(--max) + var(--gutter) * 2);
+  margin: 0 auto;
 }
 
 .section-head {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 32px;
-  margin-bottom: 56px;
+  gap: 24px 48px;
   flex-wrap: wrap;
-}
-
-.section-head .section-label {
-  margin-bottom: 18px;
+  margin-bottom: 40px;
 }
 
 .section-title {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(36px, 5vw, 64px);
-  line-height: 1;
-  letter-spacing: -0.01em;
-  color: var(--bright);
+  font-size: clamp(38px, 5.4vw, 72px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
 }
 
 .section-intro {
   max-width: 420px;
-  color: var(--ash);
-  font-size: 15px;
+  color: var(--muted);
+  font-size: 16px;
 }
