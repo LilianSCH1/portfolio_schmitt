@@ -1,0 +1,88 @@
+/* Curseur personnalisé (cursor.js), seulement avec une souris */
+.has-cursor,
+.has-cursor a,
+.has-cursor button,
+.has-cursor .char {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: opacity 0.2s;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: #fff;
+}
+
+.cursor-ring {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+}
+
+/* l'anneau est dessiné par ::before pour pouvoir grossir sans gêner la position */
+.cursor-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  transition: transform 0.35s var(--ease), background 0.25s, border-color 0.25s;
+}
+
+.cursor-hover .cursor-ring::before {
+  transform: scale(1.8);
+  border-width: 1px;
+}
+
+.cursor-down .cursor-ring::before {
+  transform: scale(0.8);
+}
+
+.cursor-hover.cursor-down .cursor-ring::before {
+  transform: scale(1.5);
+}
+
+/* Libellé (« Voir ») : l'anneau devient une pastille sombre pleine */
+.cursor-label {
+  position: relative;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.cursor-text .cursor-ring {
+  mix-blend-mode: normal;
+}
+
+.cursor-text .cursor-ring::before {
+  transform: scale(2.4);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.cursor-text .cursor-label {
+  opacity: 1;
+}
+
+.cursor-hidden .cursor-dot,
+.cursor-hidden .cursor-ring {
+  opacity: 0;
+}

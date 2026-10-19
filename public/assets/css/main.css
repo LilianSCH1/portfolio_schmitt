@@ -1,6 +1,7 @@
 @import url('./base/reset.css');
 @import url('./base/tokens.css');
 @import url('./base/layout.css');
+@import url('./components/cursor.css');
 @import url('./components/navigation.css');
 @import url('./components/button.css');
 @import url('./components/section-label.css');
