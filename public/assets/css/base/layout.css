@@ -1,4 +1,32 @@
 section {
-  padding: 120px 48px;
+  padding: 120px var(--gutter);
   position: relative;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.section-head .section-label {
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--bright);
+}
+
+.section-intro {
+  max-width: 420px;
+  color: var(--ash);
+  font-size: 15px;
 }

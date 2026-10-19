@@ -1,27 +1,78 @@
+/* Palette « Strates Lentes » : noir chaud, gris pierre, accent sable, touche braise */
 :root {
-  --black: #080808;
-  --offblack: #0e0e0e;
-  --dim: #1a1a1a;
-  --border: rgba(255, 255, 255, 0.07);
-  --muted: rgba(255, 255, 255, 0.28);
-  --mid: rgba(255, 255, 255, 0.55);
-  --bright: rgba(255, 255, 255, 0.92);
-  --accent: #c8b89a;
-  --accent-dim: rgba(200, 184, 154, 0.18);
-  --red: #d4553a;
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --mono: 'DM Mono', monospace;
+  --ink: #0c0b0a;
+  --stone-1: #141311;
+  --stone-2: #1a1917;
+  --stone-3: #2a2824;
+  --stone-4: #3a3833;
+  --ash: #8c877c;
+  --text: #d9d3c7;
+  --bright: #ece6da;
+  --sand: #c8b89a;
+  --sand-dim: rgba(200, 184, 154, 0.14);
+  --sand-line: rgba(200, 184, 154, 0.38);
+  --ember: #d4553a;
+  --line: rgba(236, 230, 218, 0.09);
+  --line-strong: rgba(236, 230, 218, 0.18);
+
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'Instrument Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', ui-monospace, monospace;
+
+  --nav-h: 64px;
+  --gutter: 48px;
+  --max: 1180px;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 16px);
 }
 
 body {
-  background: var(--black);
-  color: var(--bright);
-  font-family: var(--serif);
-  cursor: none;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
   overflow-x: hidden;
-  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* grain minéral */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: var(--sand);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 1px solid var(--sand);
+  outline-offset: 3px;
+}
+
+em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--sand);
 }

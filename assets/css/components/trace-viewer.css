@@ -4,11 +4,11 @@
 
 .project-shot.has-image:hover {
   border-color: rgba(200, 184, 154, 0.45);
-  background: linear-gradient(180deg, rgba(200, 184, 154, 0.13), rgba(255, 255, 255, 0.04));
+  background: var(--stone-3);
 }
 
 .project-shot.has-image:focus-visible {
-  outline: 1px solid var(--accent);
+  outline: 1px solid var(--sand);
   outline-offset: 2px;
 }
 
@@ -37,7 +37,7 @@
   justify-content: space-between;
   gap: 16px;
   padding: 12px 28px;
-  background: var(--bg);
+  background: var(--stone-1);
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
@@ -47,7 +47,7 @@
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ash);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -58,7 +58,7 @@
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ash);
   background: none;
   border: 1px solid transparent;
   padding: 5px 12px;
@@ -69,7 +69,7 @@
 }
 
 .trace-modal-close:hover {
-  color: var(--accent);
+  color: var(--sand);
   border-color: rgba(200, 184, 154, 0.35);
 }
 
@@ -94,7 +94,7 @@
 
 .trace-modal-desc {
   font-size: 14px;
-  color: var(--mid);
+  color: var(--text);
   line-height: 1.7;
   max-width: 640px;
   text-align: center;
