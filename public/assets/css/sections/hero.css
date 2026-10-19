@@ -1,86 +1,51 @@
-/* En-tête des pages compétences et projets : un grand panneau cobalt */
 .hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: calc(var(--max) + var(--gutter) * 2);
-  margin: 20px auto 0;
-  padding: 0 var(--gutter);
+  padding-top: 120px;
+  padding-bottom: 96px;
 }
 
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Le panneau lui-même : fond cobalt pointillé */
-.hero > .hero-grid-overlay {
-  position: absolute;
-  inset: 0 var(--gutter);
-  z-index: 0;
-  border-radius: calc(var(--radius) + 8px);
-  background-color: var(--blue);
-  background-image: radial-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1.2px);
-  background-size: 22px 22px;
+.hero-grid-overlay,
+.hero-year {
+  display: none;
 }
 
 .hero-eyebrow {
-  margin: 56px 48px 0;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: var(--lime);
-  color: var(--ink);
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.hero-headline {
-  margin: 24px 48px 0;
-  max-width: 16ch;
-  color: #fff;
-  font-size: clamp(44px, 7vw, 104px);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: -0.05em;
-}
-
-.hero-headline em {
-  padding: 0;
-  background: none;
-  color: var(--lime);
-}
-
-.hero-sub {
-  margin: 28px 48px 0;
-  max-width: 620px;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 18px;
-}
-
-.hero-scroll {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin: 36px 48px 52px;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: #fff;
-  color: var(--ink);
-  font-size: 15px;
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hero-headline {
+  max-width: 16ch;
+  font-size: clamp(40px, 6vw, 68px);
   font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.hero-sub {
+  max-width: 560px;
+  margin-top: 24px;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+/* Lien « Voir les preuves » des pages secondaires */
+.hero-scroll {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 .hero-scroll::after {
-  content: '↓';
-}
-
-.hero > .hero-year {
-  position: absolute;
-  top: 60px;
-  right: calc(var(--gutter) + 48px);
-  color: rgba(255, 255, 255, 0.7);
-  font-family: var(--mono);
-  font-size: 13px;
+  content: ' ↓';
 }

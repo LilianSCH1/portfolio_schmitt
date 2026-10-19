@@ -1,51 +1,68 @@
+/* Pages compétences : « Vue d'ensemble » en deux colonnes */
 .about {
   display: grid;
-  grid-template-columns: 5fr 7fr;
-  gap: 40px 64px;
-  align-items: start;
+  grid-template-columns: var(--aside) 1fr;
+  gap: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.about-left .section-label {
+  margin-bottom: 12px;
 }
 
 .about-statement {
-  font-size: clamp(34px, 4.2vw, 58px);
-  font-weight: 800;
-  line-height: 0.98;
-  letter-spacing: -0.045em;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .about-statement strong {
-  font-weight: 800;
-  background: linear-gradient(transparent 58%, var(--lime) 58%, var(--lime) 92%, transparent 92%);
-}
-
-.about-right {
-  padding-top: 8px;
+  font-weight: 500;
+  color: var(--muted);
 }
 
 .about-body {
   max-width: 640px;
-  margin-bottom: 28px;
-  font-size: 19px;
-  line-height: 1.6;
-  color: var(--ink-2);
+  margin-bottom: 24px;
+  font-size: 17px;
 }
 
-/* Pleine largeur pour les cartes de compétences techniques */
-.about .skill-cards {
-  grid-column: 1 / -1;
+/* Profil de l'accueil */
+.intro-text {
+  max-width: 640px;
+  font-size: 17px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 32px;
+  margin-top: 32px;
+}
+
+.skills dt {
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.skills dd {
+  color: var(--text);
+  font-size: 15px;
 }
 
 /* Ancres de projets (pages compétences) */
 .skill-tag {
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: var(--surface);
+  padding: 6px 14px;
   border: 1px solid var(--line);
-  font-size: 15px;
-  font-weight: 600;
-  transition: background 0.2s, border-color 0.2s;
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 14px;
+  transition: border-color 0.2s;
 }
 
 .skill-tag:hover {
-  background: var(--lime);
-  border-color: var(--lime);
+  border-color: var(--ink);
 }

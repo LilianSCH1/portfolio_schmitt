@@ -26,7 +26,7 @@
   gap: 16px;
   padding: 8px 8px 8px 20px;
   border-radius: 999px;
-  background: var(--surface);
+  background: var(--bg);
   flex-shrink: 0;
 }
 
@@ -50,7 +50,7 @@
   padding: 9px 16px;
   border-radius: 999px;
   border: 0;
-  font-family: var(--display);
+  font-family: inherit;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
@@ -59,18 +59,18 @@
 }
 
 .pdf-modal-newtab {
-  background: var(--surface-2);
+  background: var(--soft);
   color: var(--ink);
 }
 
 .pdf-modal-close {
   background: var(--ink);
-  color: var(--surface);
+  color: var(--bg);
 }
 
 .pdf-modal-newtab:hover,
 .pdf-modal-close:hover {
-  background: var(--lime);
+  background: var(--soft);
   color: var(--ink);
 }
 

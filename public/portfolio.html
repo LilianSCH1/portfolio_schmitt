@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lilian Schmitt - Portfolio</title>
 <meta name="description" content="Lilian Schmitt, étudiant en BUT Informatique à l'IUT de Saint-Dié-des-Vosges, recherche un stage de 14 semaines en développement web et logiciel à partir du 1er mars 2027.">
-<meta name="theme-color" content="#f3f3ef">
+<meta name="theme-color" content="#ffffff">
 <script>document.documentElement.classList.add('js');</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -18,374 +18,134 @@
 <nav aria-label="Navigation principale">
   <a href="#top" class="nav-logo">Lilian Schmitt</a>
   <ul class="nav-links">
-    <li><a href="#about">Profil</a></li>
     <li><a href="#experiences">Parcours</a></li>
     <li><a href="#projects">Projets</a></li>
     <li><a href="#competences">Compétences</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="assets/cv/CV_Lilian_SCHMITT.pdf" class="nav-cta">Mon CV</a></li>
+    <li><a href="assets/cv/CV_Lilian_SCHMITT.pdf" class="nav-cta">CV</a></li>
   </ul>
 </nav>
 
 <main>
 
-<!-- ACCUEIL : tuiles -->
-<section class="intro" id="top">
-  <div class="bento">
-
-    <div class="tile tile-intro">
-      <span class="intro-hello"><span class="wave" aria-hidden="true">👋</span>Salut, moi c'est Lilian</span>
-      <div>
-        <h1 class="intro-title">Je construis des solutions <em>utiles</em> et solides.</h1>
-        <p class="intro-sub">
-          Étudiant en BUT Informatique à l'IUT de Saint-Dié-des-Vosges, orienté développement web et logiciel.
-          En stage, j'ai migré une application métier d'Access vers Angular et Node.js.
-        </p>
-      </div>
-      <div class="intro-actions">
-        <a href="#contact" class="btn btn-primary">Me contacter <span class="arrow">↗</span></a>
-        <a href="#projects" class="btn btn-ghost">Voir mes projets</a>
-      </div>
-    </div>
-
-    <div class="tile tile-status">
-      <span class="pill">Recherche de stage</span>
-      <div>
-        <div class="tile-big">Dès le 1<sup>er</sup> mars 2027</div>
-        <p class="status-row"><span class="status-dot"></span>14 semaines · développement</p>
-      </div>
-    </div>
-
-    <div class="tile tile-stack">
-      <span class="tile-label">J'écris du</span>
-      <span class="rotator" data-rotate="TypeScript, Java, Angular, Node.js, SQL, Python, PHP">TypeScript</span>
-      <div class="stack-list" aria-label="Langages principaux">
-        <span>Java</span><span>JS / TS</span><span>C</span><span>Python</span><span>PHP</span><span>SQL</span>
-      </div>
-    </div>
-
-    <div class="tile tile-meta">
-      <span class="tile-label">Formation</span>
-      <div>
-        <div class="tile-big">BUT Informatique</div>
-        <p class="tile-note">IUT de Saint-Dié · 2024 → 2027</p>
-      </div>
-    </div>
-
-    <div class="tile tile-place">
-      <span class="tile-label">Troyes, France · heure locale</span>
-      <div>
-        <div class="clock" data-clock>--:--</div>
-        <p class="tile-note">Études à Saint-Dié-des-Vosges · Permis B</p>
-      </div>
-    </div>
-
-    <a class="tile tile-cv" href="assets/cv/CV_Lilian_SCHMITT.pdf">
-      <span class="tile-label">PDF</span>
-      <div class="tile-big">Ouvrir mon CV</div>
-    </a>
-
+<section class="hero" id="top">
+  <p class="hero-eyebrow"><span class="status-dot"></span><span>Disponible pour un stage de 14 semaines dès le 1<sup>er</sup> mars 2027</span></p>
+  <h1 class="hero-headline">Étudiant en BUT Informatique, je construis des solutions <em>utiles et solides.</em></h1>
+  <p class="hero-sub">Développement web et logiciel : Angular, Node.js, Java. Basé à Troyes.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn btn-primary">Me contacter</a>
+    <a href="assets/cv/CV_Lilian_SCHMITT.pdf" class="btn btn-ghost">Voir mon CV</a>
   </div>
 </section>
 
-<!-- PROFIL -->
-<section class="about" id="about">
-  <div class="about-left reveal">
-    <div class="section-label" data-index="01">Profil</div>
-    <p class="about-statement">Motivé, avec une vraie <strong>capacité d'adaptation.</strong></p>
-  </div>
-  <div class="about-right reveal reveal-delay-1">
-    <p class="about-body">
-      Je recherche un stage de 14 semaines en informatique, à partir du 1er mars 2027, pour continuer à progresser
-      et contribuer à des projets concrets. J'ai déjà participé à un projet de migration applicative
-      (MS Access vers Angular/Node.js) et réalisé plusieurs projets académiques en développement web, logiciel
-      et bases de données.
+<section class="split reveal" id="about">
+  <h2 class="section-label">Profil</h2>
+  <div class="split-body">
+    <p class="intro-text">
+      Étudiant à l'IUT de Saint-Dié-des-Vosges, j'aime les projets concrets. En stage, j'ai migré une application
+      métier de MS Access vers Angular et Node.js. Je cherche maintenant un stage pour progresser au sein d'une équipe.
     </p>
-  </div>
-
-  <div class="skill-cards reveal reveal-delay-2">
-    <div class="skill-card">
-      <h3><span aria-hidden="true">{ }</span>Langages</h3>
-      <div class="chips"><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">C</span><span class="chip">Python</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">PHP</span><span class="chip">SQL</span></div>
-    </div>
-    <div class="skill-card">
-      <h3><span aria-hidden="true">⌘</span>Frameworks</h3>
-      <div class="chips"><span class="chip">Angular</span><span class="chip">Node.js / Express</span><span class="chip">Symfony</span></div>
-    </div>
-    <div class="skill-card">
-      <h3><span aria-hidden="true">≡</span>Bases de données</h3>
-      <div class="chips"><span class="chip">MySQL</span><span class="chip">phpMyAdmin</span><span class="chip">PostgreSQL</span><span class="chip">pgAdmin</span></div>
-    </div>
-    <div class="skill-card">
-      <h3><span aria-hidden="true">⚙</span>Outils</h3>
-      <div class="chips"><span class="chip">Git</span><span class="chip">Trello</span><span class="chip">Airtable</span><span class="chip">Make</span><span class="chip">Figma</span><span class="chip">Canva</span><span class="chip">Microsoft 365</span><span class="chip">LibreOffice</span><span class="chip">Maple</span></div>
-    </div>
-    <div class="skill-card">
-      <h3><span aria-hidden="true">☺</span>Savoir-être</h3>
-      <div class="chips"><span class="chip">Adaptation</span><span class="chip">Organisation</span><span class="chip">Travail d'équipe</span></div>
-    </div>
-    <div class="skill-card">
-      <h3><span aria-hidden="true">Aa</span>Langues</h3>
-      <div class="chips"><span class="chip">Français · natal</span><span class="chip">Anglais · B2</span><span class="chip">Espagnol · B1</span><span class="chip">Allemand · A2</span></div>
-    </div>
+    <dl class="skills">
+      <div><dt>Langages</dt><dd>Java, JavaScript, TypeScript, C, Python, PHP, SQL, HTML, CSS</dd></div>
+      <div><dt>Frameworks et données</dt><dd>Angular, Node.js / Express, Symfony, PostgreSQL, MySQL</dd></div>
+      <div><dt>Outils</dt><dd>Git, Figma, Trello, Airtable, Make</dd></div>
+      <div><dt>Langues</dt><dd>Français, anglais (B2), espagnol (B1), allemand (A2)</dd></div>
+    </dl>
   </div>
 </section>
 
-<!-- PARCOURS -->
-<section id="experiences">
-  <div class="section-head reveal">
-    <div>
-      <div class="section-label" data-index="02">Parcours</div>
-      <h2 class="section-title">Mon parcours</h2>
-    </div>
-    <p class="section-intro">Du plus récent au plus ancien. Cliquez sur une ligne pour voir le détail.</p>
-  </div>
-
-  <div class="xp-list reveal">
-    <details class="xp" open>
-      <summary>
-        <span class="xp-year">2025 · 2026</span>
-        <span class="xp-title">Château de Guédelon<span class="xp-place">Restaurant semi-gastronomique · Treigny</span></span>
-        <span class="xp-kind is-work">Job saisonnier · 2 saisons</span>
-        <span class="xp-toggle" aria-hidden="true"></span>
-      </summary>
-      <div class="xp-body">
-        <div>
-          <p>
-            Service en salle et participation à la préparation des plats, pendant deux saisons, en 2025 et en 2026.
-            Cette expérience a renforcé ma gestion du stress et ma polyvalence.
-          </p>
-          <div class="cs-tags"><span class="cs-tag">Service</span><span class="cs-tag">Cuisine</span><span class="cs-tag">Relation client</span></div>
-        </div>
-      </div>
-    </details>
-
-    <details class="xp">
-      <summary>
-        <span class="xp-year">Fév. 2026</span>
-        <span class="xp-title">CEN Champagne-Ardenne<span class="xp-place">Protection de la nature · Rosières-près-Troyes</span></span>
-        <span class="xp-kind">Stage · 2 mois</span>
-        <span class="xp-toggle" aria-hidden="true"></span>
-      </summary>
-      <div class="xp-body">
-        <div>
-          <p>
-            Migration d'une application MS Access vers Angular et Node.js avec une base PostgreSQL.
-            Projet concret de transformation d'un outil métier.
-          </p>
-          <div class="cs-tags"><span class="cs-tag">Angular</span><span class="cs-tag">Node.js / Express</span><span class="cs-tag">PostgreSQL</span></div>
-        </div>
-        <img class="xp-thumb" src="assets/uploads/Lac_CENCA.jpeg" alt="Lac en Champagne-Ardenne" loading="lazy">
-      </div>
-    </details>
-
-    <details class="xp">
-      <summary>
-        <span class="xp-year">2024 → 2027</span>
-        <span class="xp-title">BUT Informatique<span class="xp-place">IUT de Saint-Dié-des-Vosges · Université de Lorraine</span></span>
-        <span class="xp-kind is-school">Formation</span>
-        <span class="xp-toggle" aria-hidden="true"></span>
-      </summary>
-      <div class="xp-body">
-        <div>
-          <p>
-            Formation orientée développement web et logiciel : programmation, bases de données,
-            systèmes, gestion de projet et travail en équipe.
-          </p>
-          <div class="cs-tags"><span class="cs-tag">Java</span><span class="cs-tag">C</span><span class="cs-tag">SQL</span><span class="cs-tag">Web</span></div>
-        </div>
-      </div>
-    </details>
-
-    <details class="xp">
-      <summary>
-        <span class="xp-year">Juil. 2024</span>
-        <span class="xp-title">ASSA ABLOY<span class="xp-place">Serrures et cylindres · Sainte-Savine</span></span>
-        <span class="xp-kind">Stage · 4 semaines</span>
-        <span class="xp-toggle" aria-hidden="true"></span>
-      </summary>
-      <div class="xp-body">
-        <div>
-          <p>
-            Participation aux activités d'usinage dans un contexte industriel.
-            Expérience formatrice sur la rigueur, la sécurité et l'organisation de la production.
-          </p>
-          <div class="cs-tags"><span class="cs-tag">Rigueur</span><span class="cs-tag">Autonomie</span><span class="cs-tag">Sécurité</span></div>
-        </div>
-      </div>
-    </details>
-  </div>
+<section class="split reveal" id="experiences">
+  <h2 class="section-label">Parcours</h2>
+  <ol class="rows split-body">
+    <li class="row">
+      <span class="row-date">2025 – 2026</span>
+      <h3 class="row-title">Château de Guédelon <span class="row-sub">· Job saisonnier</span></h3>
+      <p class="row-desc">Service et cuisine en restaurant semi-gastronomique, sur deux saisons.</p>
+    </li>
+    <li class="row">
+      <span class="row-date">2026</span>
+      <h3 class="row-title">CEN Champagne-Ardenne <span class="row-sub">· Stage, 2 mois</span></h3>
+      <p class="row-desc">Migration d'une application MS Access vers Angular, Node.js et PostgreSQL.</p>
+    </li>
+    <li class="row">
+      <span class="row-date">2024 – 2027</span>
+      <h3 class="row-title">BUT Informatique <span class="row-sub">· IUT de Saint-Dié-des-Vosges</span></h3>
+      <p class="row-desc">Développement web et logiciel, bases de données, systèmes, gestion de projet.</p>
+    </li>
+    <li class="row">
+      <span class="row-date">2024</span>
+      <h3 class="row-title">ASSA ABLOY <span class="row-sub">· Stage, 4 semaines</span></h3>
+      <p class="row-desc">Usinage en milieu industriel : rigueur, sécurité, organisation.</p>
+    </li>
+  </ol>
 </section>
 
-<!-- PROJETS -->
-<section id="projects">
-  <div class="section-head reveal">
-    <div>
-      <div class="section-label" data-index="03">Projets</div>
-      <h2 class="section-title">Ce que j'ai construit</h2>
-    </div>
-    <p class="section-intro">Projet de stage, projets personnels et projets de formation.</p>
-  </div>
-
-  <div class="filters reveal" role="group" aria-label="Filtrer les projets">
-    <button type="button" class="filter" data-filter="all" aria-pressed="true">Tous</button>
-    <button type="button" class="filter" data-filter="stage" aria-pressed="false">Stage</button>
-    <button type="button" class="filter" data-filter="perso" aria-pressed="false">Personnels</button>
-    <button type="button" class="filter" data-filter="formation" aria-pressed="false">Formation</button>
-  </div>
-
-  <div class="work-grid">
-    <article class="case-study is-featured reveal" data-cat="stage">
-      <div class="cs-image-cen" role="img" aria-label="Lac en Champagne-Ardenne"></div>
-      <div class="cs-content">
-        <div class="cs-index">Stage CEN · 2026</div>
-        <h3 class="cs-title">Atlas : migration applicative</h3>
-        <p class="cs-desc">
-          Migration d'une application métier depuis MS Access vers une base web plus robuste.
-          Le projet simplifie la maintenance et offre une personnalisation accrue de l'interface pour les utilisateurs.
-        </p>
-        <div class="cs-tags"><span class="cs-tag">Angular</span><span class="cs-tag">Node.js</span><span class="cs-tag">PostgreSQL</span></div>
-      </div>
-    </article>
-
-    <a class="case-study is-blue reveal reveal-delay-1" href="projects-academiques.html" data-cat="formation">
-      <div class="cs-content">
-        <div class="cs-index">IUT · 2024-2026</div>
-        <h3 class="cs-title">Projets académiques BUT</h3>
-        <p class="cs-desc">
-          MyPulse, application de vote, scène WebGL, Linux, Docker… classés selon les 6 compétences du BUT, avec rapports et traces.
-        </p>
-        <div class="cs-tags"><span class="cs-tag">PHP</span><span class="cs-tag">Three.js</span><span class="cs-tag">SQL</span></div>
-        <span class="cs-link">Explorer les projets</span>
-      </div>
-    </a>
-
-    <article class="case-study is-lime reveal" data-cat="perso">
-      <div class="cs-content">
-        <div class="cs-index">Projet personnel</div>
-        <h3 class="cs-title">Tournoi inter-IUT : ERP web</h3>
-        <p class="cs-desc">
-          Application web pour les spectateurs et les bénévoles : centraliser matchs, informations et bénévolat avec une logique type ERP.
-        </p>
-        <div class="cs-tags"><span class="cs-tag">Application web</span><span class="cs-tag">Gestion événementielle</span></div>
-      </div>
-    </article>
-
-    <article class="case-study reveal reveal-delay-1" data-cat="perso">
-      <div class="cs-content">
-        <div class="cs-index">Projet personnel · 2026</div>
-        <h3 class="cs-title">Ce portfolio</h3>
-        <p class="cs-desc">
-          Site responsive en HTML, CSS et JavaScript modulaire, sans framework : tuiles, filtres, accordéons.
-        </p>
-        <div class="cs-tags"><span class="cs-tag">HTML</span><span class="cs-tag">CSS</span><span class="cs-tag">JavaScript</span></div>
-      </div>
-    </article>
-
-    <a class="case-study is-ink reveal reveal-delay-2" href="#contact" data-cat="stage perso formation">
-      <div class="cs-content">
-        <div class="cs-index">Mars 2027</div>
-        <h3 class="cs-title">Votre projet ?</h3>
-        <p class="cs-desc">
-          Je cherche un stage de 14 semaines dès le 1er mars 2027 pour contribuer à une équipe sur des projets réels.
-        </p>
-        <span class="cs-link">Prendre contact</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- COMPÉTENCES -->
-<section id="competences">
-  <div class="section-head reveal">
-    <div>
-      <div class="section-label" data-index="04">Compétences BUT</div>
-      <h2 class="section-title">Six compétences, des preuves</h2>
-    </div>
-    <p class="section-intro">
-      Le référentiel national du BUT Informatique. Chaque compétence renvoie aux projets qui la prouvent, avec rapports et captures.
-    </p>
-  </div>
-
-  <div class="comp-grid">
-    <a class="comp-tile reveal" href="competence-c1.html">
-      <div class="comp-top"><span class="comp-code">C1</span><span class="comp-go" aria-hidden="true">→</span></div>
-      <span class="comp-name">Réaliser un développement</span>
-      <span class="comp-desc">Concevoir, coder, tester et intégrer une solution.</span>
-      <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><b>3 preuves</b></span>
-    </a>
-    <a class="comp-tile reveal reveal-delay-1" href="competence-c2.html">
-      <div class="comp-top"><span class="comp-code">C2</span><span class="comp-go" aria-hidden="true">→</span></div>
-      <span class="comp-name">Optimiser des applications</span>
-      <span class="comp-desc">Temps, précision, ressources : choisir et mesurer.</span>
-      <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>4 preuves</b></span>
-    </a>
-    <a class="comp-tile reveal reveal-delay-2" href="competence-c3.html">
-      <div class="comp-top"><span class="comp-code">C3</span><span class="comp-go" aria-hidden="true">→</span></div>
-      <span class="comp-name">Administrer des systèmes</span>
-      <span class="comp-desc">Installer, configurer, sécuriser une infrastructure.</span>
-      <span class="meter"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><b>2 preuves</b></span>
-    </a>
-    <a class="comp-tile reveal" href="competence-c4.html">
-      <div class="comp-top"><span class="comp-code">C4</span><span class="comp-go" aria-hidden="true">→</span></div>
-      <span class="comp-name">Gérer les données</span>
-      <span class="comp-desc">Concevoir et exploiter les données, dans le respect du RGPD.</span>
-      <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><b>3 preuves</b></span>
-    </a>
-    <a class="comp-tile reveal reveal-delay-1" href="competence-c5.html">
-      <div class="comp-top"><span class="comp-code">C5</span><span class="comp-go" aria-hidden="true">→</span></div>
-      <span class="comp-name">Conduire un projet</span>
-      <span class="comp-desc">Du besoin au livrable, en méthode classique ou agile.</span>
-      <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><b>3 preuves</b></span>
-    </a>
-    <a class="comp-tile reveal reveal-delay-2" href="competence-c6.html">
-      <div class="comp-top"><span class="comp-code">C6</span><span class="comp-go" aria-hidden="true">→</span></div>
-      <span class="comp-name">Travailler en équipe</span>
-      <span class="comp-desc">Collaborer efficacement dans une équipe pluridisciplinaire.</span>
-      <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>5 preuves</b></span>
-    </a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-panel reveal">
-    <div class="section-label" data-index="05">Contact</div>
-    <h2 class="contact-big">Je recherche un <em>stage de 14 semaines</em> dès le 1<sup>er</sup> mars 2027.</h2>
-    <div class="contact-cards">
-      <div class="contact-card">
-        <span class="contact-card-label">E-mail</span>
-        <span class="contact-card-value">lilian.schmitt1@etu.univ-lorraine.fr</span>
-        <span class="contact-card-action">
-          <a href="mailto:lilian.schmitt1@etu.univ-lorraine.fr">Écrire ↗</a>
-          <button type="button" class="copy-btn" data-copy="lilian.schmitt1@etu.univ-lorraine.fr">Copier</button>
-        </span>
-      </div>
-      <a href="tel:+33769226887" class="contact-card">
-        <span class="contact-card-label">Téléphone</span>
-        <span class="contact-card-value">07 69 22 68 87</span>
-        <span class="contact-card-action">Appeler ↗</span>
+<section class="split reveal" id="projects">
+  <h2 class="section-label">Projets</h2>
+  <ul class="rows split-body">
+    <li class="row">
+      <span class="row-date">2026</span>
+      <h3 class="row-title">Atlas <span class="row-sub">· Stage au CEN</span></h3>
+      <p class="row-desc">Remplacer un outil métier sous MS Access par une application web plus simple à maintenir.</p>
+    </li>
+    <li>
+      <a class="row" href="projects-academiques.html">
+        <span class="row-date">2024 – 2026</span>
+        <h3 class="row-title">Projets académiques <span class="row-sub">· BUT</span></h3>
+        <p class="row-desc">MyPulse, application de vote, scène WebGL, Linux… avec rapports et captures.</p>
+        <span class="row-arrow" aria-hidden="true">→</span>
       </a>
-      <a href="assets/cv/CV_Lilian_SCHMITT.pdf" class="contact-card">
-        <span class="contact-card-label">Curriculum vitæ</span>
-        <span class="contact-card-value">CV_Lilian_SCHMITT.pdf</span>
-        <span class="contact-card-action">Ouvrir le CV ↗</span>
-      </a>
+    </li>
+    <li class="row">
+      <span class="row-date">Personnel</span>
+      <h3 class="row-title">Tournoi inter-IUT <span class="row-sub">· ERP web</span></h3>
+      <p class="row-desc">Une application web pour coordonner matchs, informations et bénévoles.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="split reveal" id="competences">
+  <h2 class="section-label">Compétences BUT</h2>
+  <div class="split-body">
+    <div class="comp-list">
+      <a class="comp-item" href="competence-c1.html"><span class="comp-code">C1 · 3 preuves</span><span class="comp-name">Réaliser un développement</span></a>
+      <a class="comp-item" href="competence-c2.html"><span class="comp-code">C2 · 4 preuves</span><span class="comp-name">Optimiser des applications</span></a>
+      <a class="comp-item" href="competence-c3.html"><span class="comp-code">C3 · 2 preuves</span><span class="comp-name">Administrer des systèmes</span></a>
+      <a class="comp-item" href="competence-c4.html"><span class="comp-code">C4 · 3 preuves</span><span class="comp-name">Gérer les données</span></a>
+      <a class="comp-item" href="competence-c5.html"><span class="comp-code">C5 · 3 preuves</span><span class="comp-name">Conduire un projet</span></a>
+      <a class="comp-item" href="competence-c6.html"><span class="comp-code">C6 · 5 preuves</span><span class="comp-name">Travailler en équipe</span></a>
     </div>
-    <div class="contact-aside">
-      <p><strong>Ville</strong>Troyes</p>
-      <p><strong>Études</strong>Saint-Dié-des-Vosges</p>
-      <p><strong>Permis</strong>B</p>
-    </div>
+    <p class="comp-note"><a href="projects-academiques.html">Vue d'ensemble des compétences →</a></p>
+  </div>
+</section>
+
+<section class="split reveal" id="contact">
+  <h2 class="section-label">Contact</h2>
+  <div class="split-body">
+    <p class="contact-big">Un stage de 14 semaines dès le 1<sup>er</sup> mars 2027 ? Écrivez-moi.</p>
+    <ul class="contact-lines">
+      <li>
+        <span class="label">E-mail</span>
+        <a href="mailto:lilian.schmitt1@etu.univ-lorraine.fr">lilian.schmitt1@etu.univ-lorraine.fr</a>
+        <button type="button" class="copy-btn" data-copy="lilian.schmitt1@etu.univ-lorraine.fr">Copier</button>
+      </li>
+      <li>
+        <span class="label">Téléphone</span>
+        <a href="tel:+33769226887">07 69 22 68 87</a>
+      </li>
+      <li>
+        <span class="label">CV</span>
+        <a href="assets/cv/CV_Lilian_SCHMITT.pdf">CV_Lilian_SCHMITT.pdf</a>
+      </li>
+    </ul>
+    <p class="contact-meta">Troyes · Études à Saint-Dié-des-Vosges · Permis B</p>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="footer-mark" aria-hidden="true">Lilian Schmitt</div>
-  <span class="footer-copy">© 2026 · Étudiant BUT Informatique</span>
-  <span class="footer-status"><span class="status-dot"></span>Recherche de stage · mars 2027</span>
+  <span class="footer-copy">© 2026 Lilian Schmitt</span>
   <a href="#top" class="footer-top">Haut de page ↑</a>
 </footer>
 
