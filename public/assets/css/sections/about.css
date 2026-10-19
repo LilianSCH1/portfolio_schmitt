@@ -1,68 +1,70 @@
-/* Pages compétences : « Vue d'ensemble » en deux colonnes */
+/* Profil (accueil) et « Vue d'ensemble » (pages compétences) */
 .about {
   display: grid;
-  grid-template-columns: var(--aside) 1fr;
-  gap: 32px;
-  border-top: 1px solid var(--line);
-}
-
-.about-left .section-label {
-  margin-bottom: 12px;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 32px 64px;
+  align-items: start;
 }
 
 .about-statement {
   color: var(--ink);
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
 .about-statement strong {
-  font-weight: 500;
-  color: var(--muted);
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .about-body {
-  max-width: 640px;
+  max-width: 620px;
   margin-bottom: 24px;
-  font-size: 17px;
-}
-
-/* Profil de l'accueil */
-.intro-text {
-  max-width: 640px;
   font-size: 17px;
 }
 
 .skills {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px 32px;
-  margin-top: 32px;
+  gap: 12px;
+}
+
+.skills > div {
+  padding: 16px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
 }
 
 .skills dt {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: var(--ink);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .skills dd {
   color: var(--text);
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* Ancres de projets (pages compétences) */
 .skill-tag {
-  padding: 6px 14px;
-  border: 1px solid var(--line);
+  padding: 7px 14px;
   border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
   color: var(--ink);
   font-size: 14px;
-  transition: border-color 0.2s;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .skill-tag:hover {
-  border-color: var(--ink);
+  border-color: var(--accent);
+  color: var(--accent);
 }

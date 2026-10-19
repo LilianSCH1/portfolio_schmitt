@@ -2,33 +2,47 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  height: 44px;
-  padding: 0 20px;
+  height: 48px;
+  padding: 0 22px;
   border-radius: 999px;
-  border: 1px solid var(--ink);
+  border: 1px solid transparent;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 .btn-primary {
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 10px 24px -10px rgba(59, 91, 253, 0.8);
 }
 
 .btn-primary:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent-dark);
+  box-shadow: 0 14px 28px -10px rgba(59, 91, 253, 0.9);
 }
 
 .btn-ghost {
-  background: transparent;
+  background: var(--surface);
   color: var(--ink);
   border-color: var(--line);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-ghost:hover {
   border-color: var(--ink);
+}
+
+.btn .arrow {
+  transition: transform 0.2s var(--ease);
+}
+
+.btn:hover .arrow {
+  transform: translateX(3px);
 }

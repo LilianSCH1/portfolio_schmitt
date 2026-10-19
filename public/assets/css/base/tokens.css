@@ -1,21 +1,28 @@
-/* Épuré : blanc, encre, gris, un seul accent */
+/* Clair et doux : fond gris perle, cartes blanches, un seul accent bleu */
 :root {
-  --bg: #ffffff;
-  --soft: #f6f6f5;
-  --ink: #141414;
-  --text: #3d3d3d;
-  --muted: #8a8a8a;
-  --line: #ececea;
-  --accent: #2b50d6;
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --soft: #eef0f4;
+  --ink: #0f172a;
+  --text: #334155;
+  --muted: #64748b;
+  --line: #e4e7ec;
+  --accent: #3b5bfd;
+  --accent-dark: #2a3fcf;
+  --accent-soft: #eef1ff;
 
   --font: 'Inter', system-ui, -apple-system, sans-serif;
 
-  --max: 1080px;
+  --max: 1120px;
   --gutter: 32px;
-  --aside: 220px;
-  --nav-h: 64px;
-  --radius: 10px;
+  --nav-h: 68px;
+  --radius: 18px;
+  --radius-sm: 12px;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05), 0 1px 1px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 2px 4px rgba(15, 23, 42, 0.04), 0 12px 32px -12px rgba(15, 23, 42, 0.18);
+  --shadow-lg: 0 4px 8px rgba(15, 23, 42, 0.04), 0 24px 56px -20px rgba(15, 23, 42, 0.28);
 }
 
 html {
@@ -38,8 +45,8 @@ h1,
 h2,
 h3 {
   color: var(--ink);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 a {
@@ -47,14 +54,14 @@ a {
 }
 
 ::selection {
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--accent);
+  color: #fff;
 }
 
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 sup {
@@ -63,7 +70,11 @@ sup {
   vertical-align: 0.7em;
 }
 
+/* Mot mis en valeur : dégradé dans la couleur d'accent */
 em {
   font-style: normal;
-  color: var(--muted);
+  background: linear-gradient(100deg, var(--accent) 10%, #7b5cff 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

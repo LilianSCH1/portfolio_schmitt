@@ -2,21 +2,24 @@ section {
   position: relative;
   max-width: calc(var(--max) + var(--gutter) * 2);
   margin: 0 auto;
-  padding: 72px var(--gutter);
+  padding: 64px var(--gutter);
 }
 
-/* Section en deux colonnes : étiquette à gauche, contenu à droite */
-.split {
-  display: grid;
-  grid-template-columns: var(--aside) 1fr;
-  gap: 32px;
-  border-top: 1px solid var(--line);
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px 48px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
 }
 
-.split > .section-label {
-  padding-top: 4px;
+.section-title {
+  font-size: clamp(30px, 3.6vw, 42px);
+  line-height: 1.1;
 }
 
-.split-body {
-  min-width: 0;
+.section-intro {
+  max-width: 400px;
+  color: var(--muted);
 }
