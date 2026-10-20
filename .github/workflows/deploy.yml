@@ -1,0 +1,53 @@
+name: Deploy VPS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/**'
+      - 'deploy/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-vps
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SSH_HOST: ${{ vars.SSH_HOST }}
+      SSH_USER: root
+      APP_DIR: /home/portfolio/app
+      SITE_URL: https://portfolio-lilian.duckdns.org
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Préparer SSH
+        env:
+          SSH_PRIVATE_KEY_B64: ${{ secrets.SSH_PRIVATE_KEY_B64 }}
+          SSH_HOST_FINGERPRINT: ${{ vars.SSH_HOST_FINGERPRINT }}
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          echo "$SSH_PRIVATE_KEY_B64" | base64 -d > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -t ed25519 "$SSH_HOST" > ~/.ssh/known_hosts 2>/dev/null
+          actual=$(ssh-keygen -lf ~/.ssh/known_hosts | awk '{print $2}')
+          if [ "$actual" != "$SSH_HOST_FINGERPRINT" ]; then
+            echo "Empreinte SSH inattendue : $actual (attendue : $SSH_HOST_FINGERPRINT)"
+            exit 1
+          fi
+
+      - name: Envoyer les fichiers
+        run: |
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" \
+            public deploy "$SSH_USER@$SSH_HOST:$APP_DIR/"
+
+      - name: Déployer
+        run: ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" "bash $APP_DIR/deploy/deploy.sh"
+
+      - name: Vérifier le site
+        run: curl -fsS -o /dev/null -w "%{http_code}\n" "$SITE_URL/"
