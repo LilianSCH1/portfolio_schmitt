@@ -21,7 +21,7 @@ jobs:
       SSH_HOST: ${{ vars.SSH_HOST }}
       SSH_USER: root
       APP_DIR: /home/portfolio/app
-      SITE_URL: https://portfolio-lilian.duckdns.org
+      SITE_URL: https://portfolio-schmitt.neoheberg.fr
 
     steps:
       - uses: actions/checkout@v4
