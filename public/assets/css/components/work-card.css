@@ -30,9 +30,11 @@
 
 .row-meta {
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: 24px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: clamp(15px, 1.4vw, 19px);
+  font-weight: 500;
   white-space: nowrap;
 }
 
@@ -43,15 +45,33 @@
   font-size: 15px;
 }
 
+.row-stack {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+  list-style: none;
+}
+
+.row-stack li {
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 .tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 3px 10px;
+  padding: 5px 14px;
   border: 1.5px solid var(--accent);
   border-radius: var(--radius);
   color: var(--accent);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1.4;
