@@ -6,7 +6,7 @@ const path = require('path');
 const PORT = Number(process.env.PORT) || 3007;
 const ROOT = path.resolve(process.env.ROOT || path.join(__dirname, '..', 'public'));
 
-// Mêmes réécritures que vercel.json
+// URL propres vers les pages HTML
 const ROUTES = {
   '/': '/portfolio.html',
   '/projects-academiques': '/projects-academiques.html',

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/build.js",
-    "dev": "echo \"No dev server configured for this project\""
+    "start": "node deploy/server.js"
   }
 }
