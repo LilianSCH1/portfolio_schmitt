@@ -50,4 +50,4 @@ jobs:
         run: ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" "bash $APP_DIR/deploy/deploy.sh"
 
       - name: Vérifier le site
-        run: curl -fsS -o /dev/null -w "%{http_code}\n" "$SITE_URL/"
+        run: ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" "curl -fsS -o /dev/null -w '%{http_code}\n' --resolve ${SITE_URL#https://}:443:127.0.0.1 $SITE_URL/"
