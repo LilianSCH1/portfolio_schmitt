@@ -53,91 +53,26 @@
   color: var(--ink);
 }
 
-/* Stack technique : une carte par thème */
 .stack {
-  margin-top: 96px;
-}
-
-.stack-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 12px 32px;
-  margin-bottom: 28px;
-}
-
-.stack-head h3 {
-  color: var(--ink);
-  font-size: clamp(26px, 3vw, 38px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.stack-head p {
-  max-width: 380px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
-.stack-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.stack-card {
-  display: grid;
-  align-content: start;
-  gap: 22px;
-  padding: 32px;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: var(--paper);
-  transition: border-color 0.25s, transform 0.35s var(--ease);
-}
-
-.stack-card:hover {
-  border-color: var(--ink);
-  transform: translateY(-3px);
-}
-
-.stack-card dt {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  color: var(--ink);
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.stack-card dt b {
-  color: var(--accent);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-}
-
-.stack-card dd {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 36px;
 }
 
-.stack-card dd span {
-  padding: 9px 18px;
+.stack span {
+  padding: 7px 14px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--bg);
   color: var(--ink);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.stack-card dd span:hover {
-  border-color: var(--ink);
+.stack span:hover {
   background: var(--ink);
+  border-color: var(--ink);
   color: #fff;
 }
 
