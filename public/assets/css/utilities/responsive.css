@@ -107,9 +107,9 @@
     grid-template-columns: 1fr;
   }
 
-  .stack > div {
-    grid-template-columns: 1fr;
-    gap: 10px;
+  .stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 24px;
   }
 
   .hero-foot {

@@ -53,41 +53,41 @@
   color: var(--ink);
 }
 
-/* Stack technique, rangée par thème */
+/* Stack technique : une colonne par thème */
 .stack {
-  margin-top: 48px;
-  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 56px;
 }
 
 .stack > div {
-  display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 16px;
-  align-items: baseline;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
+  padding-top: 18px;
+  border-top: 1px solid var(--ink);
+}
+
+.stack dt {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.stack dt b {
+  color: var(--accent);
 }
 
 .stack dd {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.stack span {
-  padding: 7px 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
   color: var(--ink);
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 600;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  line-height: 1.9;
+  letter-spacing: -0.01em;
+  transition: color 0.2s, transform 0.2s var(--ease);
 }
 
-.stack span:hover {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
+.stack dd:hover {
+  color: var(--accent);
+  transform: translateX(4px);
 }
 
 /* ── « Vue d'ensemble » (pages compétences) ──────────── */
