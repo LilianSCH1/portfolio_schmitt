@@ -53,11 +53,25 @@
   color: var(--ink);
 }
 
+/* Stack technique, rangée par thème */
 .stack {
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+}
+
+.stack > div {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.stack dd {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 36px;
 }
 
 .stack span {
