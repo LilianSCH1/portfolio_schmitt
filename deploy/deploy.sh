@@ -5,7 +5,6 @@ set -euo pipefail
 
 APP_DIR=/home/portfolio/app
 APP_USER=portfolio
-PM2="runuser -u $APP_USER -- env HOME=/home/portfolio/home PM2_HOME=/home/portfolio/home/.pm2 pm2"
 NGINX_CONF=/etc/nginx/sites-available/portfolio.conf
 
 chown -R "$APP_USER:$APP_USER" "$APP_DIR"
@@ -26,9 +25,7 @@ fi
 
 # Le serveur lit les fichiers à chaque requête ; on le relance pour prendre
 # en compte un éventuel changement de server.js.
-cd "$APP_DIR"
-$PM2 startOrRestart deploy/ecosystem.config.js
-$PM2 save
+systemctl restart portfolio
 
 for i in 1 2 3 4 5; do
   if curl -fsS -o /dev/null http://127.0.0.1:3007/; then

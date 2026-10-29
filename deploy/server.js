@@ -1,4 +1,4 @@
-// Serveur statique du portfolio (lancé par PM2, derrière Nginx). Aucune dépendance.
+// Serveur statique du portfolio (service systemd portfolio, derrière Nginx). Aucune dépendance.
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
