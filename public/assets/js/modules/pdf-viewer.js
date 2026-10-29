@@ -1,9 +1,10 @@
+// Visionneuse en fenêtre : PDF et sites des projets (liens data-viewer).
 export function initPdfViewer() {
   const modal = document.createElement('div');
   modal.className = 'pdf-modal';
   modal.setAttribute('role', 'dialog');
   modal.setAttribute('aria-modal', 'true');
-  modal.setAttribute('aria-label', 'Visionneuse PDF');
+  modal.setAttribute('aria-label', 'Visionneuse');
   modal.innerHTML = `
     <div class="pdf-modal-bar">
       <span class="pdf-modal-title"></span>
@@ -13,7 +14,7 @@ export function initPdfViewer() {
       </div>
     </div>
     <div class="pdf-modal-body">
-      <iframe title="Visionneuse PDF" allowfullscreen></iframe>
+      <iframe title="Visionneuse" allowfullscreen></iframe>
     </div>
   `;
   document.body.appendChild(modal);
@@ -45,10 +46,10 @@ export function initPdfViewer() {
   });
 
   document.addEventListener('click', (e) => {
-    const link = e.target.closest('a[href$=".pdf"]');
-    if (!link) return;
+    const link = e.target.closest('a[href$=".pdf"], a[data-viewer]');
+    if (!link || e.ctrlKey || e.metaKey || e.shiftKey) return;
     e.preventDefault();
-    const label = link.textContent.trim() || link.href.split('/').pop();
+    const label = link.dataset.viewer || link.textContent.trim() || link.href.split('/').pop();
     open(link.href, label);
   });
 }
