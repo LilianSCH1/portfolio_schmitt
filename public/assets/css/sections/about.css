@@ -53,41 +53,54 @@
   color: var(--ink);
 }
 
-/* Stack technique : une colonne par thème */
+/* Stack technique : pleine largeur, une ligne par thème */
 .stack {
+  margin-top: 120px;
+}
+
+.stack-head {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.stack-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 32px;
-  margin-top: 56px;
+  grid-template-columns: 260px 1fr;
+  gap: 56px;
+  align-items: baseline;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.stack > div {
-  padding-top: 18px;
-  border-top: 1px solid var(--ink);
-}
-
-.stack dt {
+.stack-row dt {
   display: flex;
-  gap: 10px;
-  margin-bottom: 14px;
+  align-items: baseline;
+  gap: 14px;
 }
 
-.stack dt b {
+.stack-row dt b {
   color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
 }
 
-.stack dd {
+.stack-row dd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 44px;
+}
+
+.stack-row dd span {
   color: var(--ink);
-  font-size: 17px;
+  font-size: clamp(22px, 2.4vw, 34px);
   font-weight: 600;
-  line-height: 1.9;
-  letter-spacing: -0.01em;
-  transition: color 0.2s, transform 0.2s var(--ease);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  transition: color 0.2s;
 }
 
-.stack dd:hover {
+.stack-row dd span:hover {
   color: var(--accent);
-  transform: translateX(4px);
 }
 
 /* ── « Vue d'ensemble » (pages compétences) ──────────── */
