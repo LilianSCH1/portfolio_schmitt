@@ -108,17 +108,15 @@
   }
 
   .stack {
-    margin-top: 80px;
+    margin-top: 72px;
   }
 
-  .stack-row {
+  .stack-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 28px 0;
   }
 
-  .stack-row dd {
-    gap: 6px 28px;
+  .stack-card {
+    padding: 24px;
   }
 
   .hero-foot {
